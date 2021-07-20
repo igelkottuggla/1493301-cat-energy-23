@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Natalia Protasova](https://up.htmlacademy.ru/adaptive/23/user/1493301).
-* Наставник: `Неизвестно`.
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---
 
