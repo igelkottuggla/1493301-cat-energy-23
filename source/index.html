@@ -39,7 +39,7 @@
             <div class="promo__wrapper wrapper">
 
                 <div class="promo__info">
-                    <h1 class="promo__title main-title">Функциональное питание для котов</h1>
+                    <h1 class="promo__main-title main-title">Функциональное питание для котов</h1>
                     <p class="promo__desc">Занялся собой? Займись котом!</p>
                     <picture>
                         <img class="promo__pic" src="https://www.explorejasper.com/wp-content/uploads/2019/03/placeholder-images.png" alt="Корм для кошек Cat Energy с курицей">
@@ -74,7 +74,7 @@
 
         <section class="advantages">
             <div class="advantages__wrapper wrapper">
-                <h2 class="main-title">Как это работает</h2>
+                <h2 class="advantages__main-title main-title">Как это работает</h2>
                     <ul class="advantages__list">
                         <li class="advantages__item advantages__item--leaf">
                             <p class="advantages__list-description">Функциональное питание содержит только полезные питательные вещества.
@@ -98,7 +98,7 @@
 
         <section class="example">
             <div class="">
-                <h2 class="example__title main-title">Живой пример</h2>
+                <h2 class="example__main-title main-title">Живой пример</h2>
             </div>
             <div class="example__wrapper wrapper">
                 <div class="example__container">
@@ -108,7 +108,14 @@
                         Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
 
                         <table class="example__list">
-                            <tbody>
+                                <thead class="visually-hidden">
+                                    <tr>
+                                        <th>Показатели</th>
+                                        <th>Описание</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
                                 <tr class="example__table">
                                     <td class="example__in-numbers">5 кг</td>
                                     <td class="example__in-words">снижение веса</td>
@@ -117,9 +124,9 @@
                                     <td class="example__in-numbers">60 дней</td>
                                     <td class="example__in-words">затрачено времени</td>
                                 </tr>
-                                <tr class="example__table result">
-                                    <td class="result__title">Затраты на питание:</td>
-                                    <td class="result__cost">15 000 руб.</td>
+                                <tr class="example__table-result">
+                                    <td class="example__result-cost">15 000 руб.</td>
+                                    <td class="example__result-title">Затраты на питание:</td>
                                 </tr>
                             </tbody>
 
@@ -129,7 +136,7 @@
 
                     <div class="example__models models">
                         <div class="models__images">
-                            <div class="models__wrapper wrapper models__wrapper--before current">
+                            <div class="models__wrapper wrapper models__wrapper--before models__wrapper--current">
                                 <picture>
                                     <img src="https://www.explorejasper.com/wp-content/uploads/2019/03/placeholder-images.png" alt="Cat before dieat">
                                 </picture>
@@ -151,7 +158,7 @@
                             </div>
 
                             <div class="slider__bar">
-                                <span class="slider__toggle"></span>
+                                <button class="slider__toggle"></button>
                             </div>
                         </div>
                     </div>
