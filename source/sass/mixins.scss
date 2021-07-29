@@ -1,0 +1,14 @@
+@mixin descr-font {
+  font-family: $accent-font;
+  font-size: 14px;
+}
+
+@mixin displ-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin titles-decor {
+  font-family: $main-font;
+  text-transform: uppercase;
+}

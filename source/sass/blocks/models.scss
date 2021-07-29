@@ -1,0 +1,25 @@
+.models {
+  @include displ-flex;
+  overflow: hidden;
+}
+
+.models__wrapper {
+  padding-left: 0;
+}
+
+.models__images {
+  margin: 9px 0 30px;
+}
+
+.models__before,
+.models__after {
+  width: 280px;
+}
+
+.models__before {
+  margin-left: -20px;
+}
+
+.models__img {
+  width: auto;
+}

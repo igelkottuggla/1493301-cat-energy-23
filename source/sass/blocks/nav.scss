@@ -1,0 +1,43 @@
+.nav {
+  display: flex;
+  margin-top: 17px;
+  width: 100%;
+  height: 100%;
+}
+
+.nav__list {
+  @include displ-flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav__item {
+  position: relative;
+  width: 320px;
+  padding: 21px 0 21px;
+  text-align: center;
+  border-top: 1px solid $grey-line-2;
+  border-bottom: 1px solid $grey-line-2;
+}
+
+.nav__link {
+  padding: 10px 0 10px 0;
+  color: $black;
+  font-family: $main-bold-font;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+//for desktop
+// .nav__link--index {
+//   color: $white;
+// }
+
+.nav__link:hover {
+  opacity: 0.6;
+}
+
+.nav__link:active {
+  opacity: 0.3;
+}

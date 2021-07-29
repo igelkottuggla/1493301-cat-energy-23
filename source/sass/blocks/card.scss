@@ -1,0 +1,69 @@
+.card {
+  margin-bottom: 27px;
+  border-bottom: 1px solid #ededed;
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.card__pic-link {
+  flex-shrink: 0;
+}
+
+.card:nth-child(even) .card__img {
+  padding-top: 14px;
+  padding-left: 12px;
+}
+
+.card:first-of-type .card__img {
+  padding: 0;
+}
+
+.card__title-link {
+  text-decoration: none;
+}
+
+.card__title {
+  margin: 18px 0 13px 0;
+  padding-right: 56px;
+  color: $special_dark-grey-3;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.card__title--more {
+  margin-top: 103px;
+  padding-right: 0;
+  text-align: center;
+}
+
+.card__cell {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+}
+
+.card__options-name,
+.card__options-amount,
+.card__more-goods {
+  font-family: $accent-font;
+  font-size: 12px;
+}
+
+.card__options-amount {
+  text-align: right;
+}
+
+.card__options-amount span {
+  text-transform: uppercase;
+}
+
+.card__more-goods {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}

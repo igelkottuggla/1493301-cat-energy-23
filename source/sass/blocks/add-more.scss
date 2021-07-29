@@ -1,0 +1,41 @@
+.add-more {
+  display: flex;
+}
+
+.add-more__heading {
+  position: relative;
+  margin: 22px 0 34px 0;
+  font-size: 24px;
+}
+
+.add-more__item {
+  border-bottom: 1px solid #cdcdcd;
+}
+
+.add-more__card {
+  @include displ-flex;
+}
+
+.add-more__title {
+  margin: 13px 0 0;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.add-more__amount {
+  @include descr-font;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 14px;
+  color: $special_dark-grey-2;
+}
+
+.add-more__price {
+  text-transform: uppercase;
+}
+
+.add-more__button {
+  margin-bottom: 15px;
+  font-size: 16px;
+  text-decoration: none;
+}

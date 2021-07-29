@@ -1,0 +1,56 @@
+.catalog {
+  display: flex;
+}
+
+.catalog__main-title {
+  margin-bottom: 41px;
+  margin-top: 27px;
+  color: $black;
+  line-height: 36px;
+}
+
+.options-descr {
+  color: $special_dark-grey-2;
+  font-family: $accent-font;
+  font-size: 12px;
+  line-height: 16px;
+  flex-grow: 1;
+}
+
+.catalog__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 280px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.catalog__btn--grey {
+  background-color: $basic_light-grey;
+  color: $special_dark-grey-2;
+}
+
+.catalog__more {
+  border-bottom: 1px solid #ededed;
+  text-align: center;
+}
+
+.catalog__more-title {
+  position: relative;
+  margin: 74px 0 8px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/svg/icon-plus.svg");
+    fill: $special-light-grey;
+    top: -50px;
+    left: 45%;
+  }
+}
+
+.catalog__more-desc {
+  margin-bottom: 21px;
+}

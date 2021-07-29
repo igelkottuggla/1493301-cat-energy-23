@@ -1,0 +1,17 @@
+.button {
+  @include titles-decor;
+  display: block;
+  padding: 12px 44px;
+  width: 100%;
+  background-color: $basic-green;
+  color: $white;
+  font-size: 14px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button--show-more {
+  background-color: $basic_light-grey;
+  color: $special_dark-grey-2;
+}
