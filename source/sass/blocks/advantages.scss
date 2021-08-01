@@ -1,34 +1,8 @@
-.advantages {
-  display: flex;
-}
-
 .advantages__main-title {
-  margin-top: 7px;
-  color: $black;
-}
-
-.advantages__list {
-  margin-top: 40px;
-}
-
-.advantages__item {
-  position: relative;
-  margin-bottom: 26px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    background: $basic-green;
-    left: 0;
-    top: 0;
-  }
+  @include secondary-titles-fs36-lh40;
 }
 
 .advantages__list-description {
-  @include descr-font;
-  line-height: 18px;
-  padding-left: 80px;
-  color: $special_dark-grey-2;
+  @include plain-text-fs14-lh18($accent-font);
+  color: $grey-text;
 }

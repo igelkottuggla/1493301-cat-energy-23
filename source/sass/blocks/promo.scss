@@ -1,45 +1,20 @@
 .promo {
-  position: relative;
-  min-height: 460px;
-  margin-bottom: 15px;
-  color: $white;
-
-  &::before {
-    position: absolute;
-    content: "";
-    min-height: 302px;
-    width: 100%;
-    background: $basic-green;
-    background-image: url("../img/index-background-desktop@2x.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    top: -27px;
-    left: 0;
-    z-index: -1;
-  }
-}
-
-.promo__info {
-  margin-top: 25px;
   text-align: center;
+  background: $basic-green;
+  background-image: url("../../img/promo/mobile/index-background-mobile@1x.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .promo__main-title {
-  margin-bottom: 25px;
-  line-height: 36px;
+  color: $light-text;
 }
 
 .promo__desc {
-  margin-bottom: 27px;
-  color: $white;
-  font-size: 14px;
-  line-height: 14px;
+  @include plain-text-fs14($main-font, $lineHeight: 14px);
+  color: $light-text;
   text-transform: uppercase;
-}
-
-.promo__pic {
-  display: block;
-  margin-bottom: 5px;
 }
 
 .promo__link {

@@ -1,25 +1,16 @@
 .bonus {
-  position: relative;
-  margin: 34px 0 34px 0;
+  @include basic-text-fs16-lh20($accent-font);
   min-height: 290px;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: $basic-green;
+  background-image: url("../../img/bonus/mobile/gift-photo-mobile@1x.jpg");
+  text-align: center;
 }
 
 .bonus__link {
-  display: block;
-  margin-top: 38px;
   text-decoration: none;
 }
 
 .bonus__text {
-  margin: 0;
-  padding: 188px 50px 45px 59px;
-  color: $white;
-  font-family: $accent-font;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
+  @include basic-text-fs16-lh20($accent-font);
+  color: $light-text;
 }

@@ -1,54 +1,20 @@
-.categories__list {
-  @include displ-flex;
-}
-
 .categories__item {
-  position: relative;
-  margin-bottom: 20px;
-  background-color: $basic_light-grey;
-}
-
-.categories__block {
-  padding: 35px 35px 20px 20px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 50px;
-    height: 50px;
-    background: $basic-green;
-    left: 22px;
-    top: 23px;
-    border-radius: 50%;
-  }
+  background-color: $primary-grey-bg;
 }
 
 .categories__title {
-  margin: 0 0 35px 70px;
-  font-size: 24px;
+  @include big-text-dark-fs24($lineHeight: 37px);
   text-transform: uppercase;
 }
 
 .categories__description {
-  @include descr-font;
-  line-height: 18px;
-  margin-bottom: 40px;
+  @include plain-text-fs14-lh18($accent-font);
+  color: $grey-text;
 }
 
 .categories__button {
-  @include titles-decor;
-  position: relative;
-  color: $black;
-  font-size: 16px;
+  @include dark-small-titles-fs16($lineHeight: 16px);
+  color: $black-text;
+  text-transform: uppercase;
   text-decoration: none;
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 32px;
-    height: 10px;
-    background-repeat: no-repeat;
-    top: 35%;
-    left: 118%;
-  }
 }

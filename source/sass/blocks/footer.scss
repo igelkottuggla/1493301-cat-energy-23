@@ -1,120 +1,35 @@
 .footer {
-  @include displ-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $basic_light-grey;
-}
-
-.footer__wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.footer__contacts {
-  display: flex;
-  justify-content: center;
-  margin: 0 -20px;
-  background-color: $basic_light-grey;
-  padding: 13px 20px 11px 20px;
+  background-color: $primary-grey-bg;
 }
 
 .footer__contacts--index {
-  padding: 16px 20px 11px 20px;
-  background-color: $white;
+  background-color: $primary-bg-color;
 }
 
 .footer__contacts-title {
-  @include titles-decor;
-  font-size: 16px;
-  line-height: 20px;
-  width: 140px;
+  @include basic-text-fs16-lh20($main-font);
+  text-transform: uppercase;
 }
 
 .footer__contacts-address {
-  @include descr-font;
-  line-height: 20px;
-  color: $special_dark-grey-2;
-  width: 140px;
-}
-
-.footer__contacts-address span {
-  display: block;
-  margin-top: 0;
-}
-
-.footer__map {
-  justify-content: center;
-  margin-left: -20px;
-}
-
-.footer__map img {
-  margin: 0 auto;
-  width: 320px;
-}
-
-.footer__links {
-  @include displ-flex;
-  position: relative;
-  align-items: center;
-  background-color: $basic_light-grey;
-
-  &::before {
-    position: absolute;
-    content: "";
-    width: 90%;
-    border-top: 1px solid #d9d9d9;
-    top: 95px;
-  }
-
-  &::after {
-    position: absolute;
-    content: "";
-    width: 90%;
-    border-top: 1px solid #d9d9d9;
-    top: 158px;
-  }
-}
-
-.footer__block {
-  margin-top: 40px;
-  margin-bottom: 30px;
-}
-
-.footer__block--copyright {
-  margin-top: 14px;
+  @include plain-text-fs14($accent-font, $lineHeight: 20px);
+  color: $grey-text;
 }
 
 .footer__logo {
   cursor: pointer;
 }
 
-.footer__list {
-  display: flex;
-  align-items: center;
-  min-width: 130px;
-  margin: 0 auto;
-  padding: 25px 0 20px;
-}
-
 .footer__developer-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 280px;
   text-decoration: none;
 }
 
 .footer__developer-link .footer__svg {
-  fill: $special_dark-grey;
+  fill: $footer-links-grey-color;
 }
 
 .footer__developer-link p {
-  color: $special_dark-grey;
+  color: $footer-links-grey-color;
   font-family: $accent-font;
   font-size: 16px;
-}
-
-.footer__developer-icon {
-  display: flex;
-  margin-right: -7px;
 }

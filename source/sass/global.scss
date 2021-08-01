@@ -9,14 +9,14 @@ html {
 }
 
 body {
+  @include basic-text-fs16-lh20($accent-font);
+  color: $black-text;
+  background-color: $primary-bg-color;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: $main-font;
-  background: $white;
-  font-size: 16px;
   overflow-x: hidden;
 }
 

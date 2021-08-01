@@ -1,41 +1,22 @@
-.add-more {
-  display: flex;
-}
-
 .add-more__heading {
-  position: relative;
-  margin: 22px 0 34px 0;
-  font-size: 24px;
+  @include secondary-subtitles-dark-fs24-lh24;
 }
 
 .add-more__item {
-  border-bottom: 1px solid #cdcdcd;
-}
-
-.add-more__card {
-  @include displ-flex;
+  border-bottom: 1px solid $border-color;
 }
 
 .add-more__title {
-  margin: 13px 0 0;
-  font-size: 16px;
+  @include dark-small-titles-fs16($lineHeight: 16px);
+  color: $dark-grey-text;
   text-transform: uppercase;
 }
 
 .add-more__amount {
-  @include descr-font;
-  display: flex;
-  justify-content: space-between;
-  margin: 10px 0 14px;
-  color: $special_dark-grey-2;
+  @include plain-text-fs14($accent-font, $lineHeight: 14px);
+  color: $grey-text;
 }
 
 .add-more__price {
   text-transform: uppercase;
-}
-
-.add-more__button {
-  margin-bottom: 15px;
-  font-size: 16px;
-  text-decoration: none;
 }
