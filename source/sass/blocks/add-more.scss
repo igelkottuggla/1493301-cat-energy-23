@@ -1,0 +1,22 @@
+.add-more__heading {
+  @include secondary-subtitles-dark-fs24-lh24;
+}
+
+.add-more__item {
+  border-bottom: 1px solid $border-color;
+}
+
+.add-more__title {
+  @include dark-small-titles-fs16($lineHeight: 16px);
+  color: $dark-grey-text;
+  text-transform: uppercase;
+}
+
+.add-more__amount {
+  @include plain-text-fs14($accent-font, $lineHeight: 14px);
+  color: $grey-text;
+}
+
+.add-more__price {
+  text-transform: uppercase;
+}

@@ -1,0 +1,12 @@
+.nav__item {
+  text-align: center;
+  border-top: 1px solid $nav-link-decor;
+  border-bottom: 1px solid $nav-link-decor;
+}
+
+.nav__link {
+  @include nav-links-fs20-lh20;
+  color: $black-text;
+  text-transform: uppercase;
+  text-decoration: none;
+}

@@ -1,0 +1,47 @@
+@mixin font($fontFamily, $fontSize, $lineHeight, $fontWeight, $fontStyle) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+}
+
+@mixin title-fs36-lh36() {
+  @include font($main-font, 36px, 36px, $font-weight-normal, normal);
+}
+
+@mixin secondary-titles-fs36-lh40() {
+  @include font($main-font, 36px, 40px, $font-weight-normal, normal);
+}
+
+@mixin secondary-subtitles-dark-fs24-lh24() {
+  @include font($main-font, 24px, 24px, $font-weight-normal, normal);
+}
+
+@mixin dark-small-titles-fs16($lineHeight) {
+  @include font($main-font, 16px, $lineHeight, $font-weight-normal, normal);
+}
+
+@mixin basic-text-fs16-lh20($fontFamily) {
+  @include font($fontFamily, 16px, 20px, $font-weight-normal, normal);
+}
+
+@mixin big-text-dark-fs24($lineHeight) {
+  @include font($main-font, 24px, $lineHeight, $font-weight-normal, normal);
+}
+
+@mixin plain-text-fs14-lh18($fontFamily) {
+  @include font($fontFamily, 14px, 18px, $font-weight-normal, normal);
+}
+
+@mixin plain-text-fs14($fontFamily, $lineHeight) {
+  @include font($fontFamily, 14px, $lineHeight, $font-weight-normal, normal);
+}
+
+@mixin tables-basic-font-fs12($fontFamily, $lineHeight) {
+  @include font($fontFamily, 12px, $lineHeight, $font-weight-normal, normal);
+}
+
+@mixin nav-links-fs20-lh20() {
+  @include font($main-bold-font, 20px, 20px, $font-weight-bold, normal);
+}

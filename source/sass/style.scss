@@ -1,1 +1,31 @@
-// Начните писать стили здесь
+//Common
+@import "fonts";
+@import "mixins";
+@import "variables";
+@import "global";
+
+//Common pages' blocks
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/wrapper";
+@import "blocks/main-title";
+@import "blocks/button";
+@import "blocks/footer";
+@import "blocks/social";
+
+//Index page
+@import "blocks/promo";
+@import "blocks/categories";
+@import "blocks/advantages";
+@import "blocks/example";
+@import "blocks/models";
+@import "blocks/slider";
+
+//Catalog page
+@import "blocks/card";
+@import "blocks/catalog";
+@import "blocks/add-more";
+@import "blocks/bonus";
+
+//Form page
+@import "blocks/order";

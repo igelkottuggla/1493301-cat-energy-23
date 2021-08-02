@@ -1,0 +1,37 @@
+.example {
+  background-color: $secondary-grey-bg;
+}
+
+.example__main-title {
+  @include secondary-titles-fs36-lh40;
+}
+
+.example__description {
+  @include plain-text-fs14-lh18($accent-font);
+  color: $grey-text;
+}
+
+.example__list {
+  text-align: center;
+}
+
+.example__table {
+  border: 1px solid $border-color;
+  border-radius: 3px;
+}
+
+.example__in-numbers {
+  @include secondary-subtitles-dark-fs24-lh24;
+  text-transform: uppercase;
+}
+
+.example__in-words {
+  @include tables-basic-font-fs12($accent-font, $lineHeight: 12px);
+  color: $grey-text;
+  background-color: $secondary-grey-bg;
+}
+
+.example__table-result td {
+  @include tables-basic-font-fs12($main-font, $lineHeight: 20px);
+  text-transform: uppercase;
+}

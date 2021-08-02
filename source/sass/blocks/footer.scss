@@ -1,0 +1,35 @@
+.footer {
+  background-color: $primary-grey-bg;
+}
+
+.footer__contacts--index {
+  background-color: $primary-bg-color;
+}
+
+.footer__contacts-title {
+  @include basic-text-fs16-lh20($main-font);
+  text-transform: uppercase;
+}
+
+.footer__contacts-address {
+  @include plain-text-fs14($accent-font, $lineHeight: 20px);
+  color: $grey-text;
+}
+
+.footer__logo {
+  cursor: pointer;
+}
+
+.footer__developer-link {
+  text-decoration: none;
+}
+
+.footer__developer-link .footer__svg {
+  fill: $footer-links-grey-color;
+}
+
+.footer__developer-link p {
+  color: $footer-links-grey-color;
+  font-family: $accent-font;
+  font-size: 16px;
+}

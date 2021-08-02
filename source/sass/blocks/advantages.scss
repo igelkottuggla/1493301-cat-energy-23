@@ -1,0 +1,8 @@
+.advantages__main-title {
+  @include secondary-titles-fs36-lh40;
+}
+
+.advantages__list-description {
+  @include plain-text-fs14-lh18($accent-font);
+  color: $grey-text;
+}

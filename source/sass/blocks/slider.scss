@@ -1,0 +1,23 @@
+.slider__button {
+  @include basic-text-fs16-lh20($main-font);
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.slider__bar {
+  width: 84px;
+  height: 14px;
+  background: $primary-bg-color;
+  border: 1px solid $special_grey;
+  border-radius: 6px;
+}
+
+.slider__toggle {
+  width: 35px;
+  height: 6px;
+  background: $basic-green;
+  border-radius: 6px;
+  border: none;
+}

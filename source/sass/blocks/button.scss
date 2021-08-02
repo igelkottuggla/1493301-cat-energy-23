@@ -1,0 +1,20 @@
+.button {
+  @include plain-text-fs14-lh18($main-font);
+  background-color: $basic-green;
+  text-transform: uppercase;
+  color: $light-text;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.button--show-more {
+  background-color: $primary-grey-bg;
+  color: $grey-text;
+}
+
+.button--buy {
+  @include basic-text-fs16-lh20($main-font);
+  color: $light-text;
+}

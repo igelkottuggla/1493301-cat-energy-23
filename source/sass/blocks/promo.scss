@@ -1,0 +1,22 @@
+.promo {
+  text-align: center;
+  background: $basic-green;
+  background-image: url("../../img/promo/mobile/index-background-mobile@1x.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.promo__main-title {
+  color: $light-text;
+}
+
+.promo__desc {
+  @include plain-text-fs14($main-font, $lineHeight: 14px);
+  color: $light-text;
+  text-transform: uppercase;
+}
+
+.promo__link {
+  text-decoration: none;
+}

@@ -1,0 +1,38 @@
+.card {
+  border-bottom: 1px solid $light-border;
+}
+
+.card__title-link {
+  text-decoration: none;
+}
+
+.card__title {
+  @include basic-text-fs16-lh20($main-font);
+  color: $dark-grey-text;
+  text-transform: uppercase;
+}
+
+.card__title--more {
+  text-align: center;
+}
+
+.card__options-name {
+  @include tables-basic-font-fs12($accent-font, $lineHeight: 16px);
+  color: $grey-text;
+}
+
+.card__options-amount {
+  @include tables-basic-font-fs12($accent-font, $lineHeight: 16px);
+  color: $grey-text;
+  text-align: right;
+}
+
+.card__more-goods {
+  @include tables-basic-font-fs12($accent-font, $lineHeight: 16px);
+  color: $grey-text;
+  text-align: center;
+}
+
+.card__options-amount span {
+  text-transform: uppercase;
+}

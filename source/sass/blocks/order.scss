@@ -1,0 +1,49 @@
+.order__desc {
+  @include plain-text-fs14-lh18($main-font);
+  text-transform: uppercase;
+}
+
+.order fieldset {
+  border: none;
+}
+
+.order__label {
+  @include dark-small-titles-fs16($lineHeight: 18px);
+  text-transform: uppercase;
+  color: $grey-text;
+}
+
+.order__aim .order__label {
+  color: $dark-grey-text;
+}
+
+.order__extra-item .order__label {
+  color: $black-text;
+}
+
+.order__input {
+  @include dark-small-titles-fs16($lineHeight: 18px);
+  color: $grey-text;
+}
+
+.order__input::placeholder {
+  text-transform: uppercase;
+}
+
+.order__fildset-title {
+  @include big-text-dark-fs24($lineHeight: 26px);
+}
+
+.order__comment-field::placeholder {
+  @include dark-small-titles-fs16($lineHeight: 18px);
+  text-transform: uppercase;
+}
+
+.order__button {
+  @include dark-small-titles-fs16($lineHeight: 18px);
+}
+
+.order__footnote-text {
+  @include plain-text-fs14($accent-font, $lineHeight: 16px);
+  text-align: center;
+}
