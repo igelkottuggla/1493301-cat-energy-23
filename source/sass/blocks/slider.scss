@@ -1,3 +1,13 @@
+.slider {
+  position: relative;
+}
+
+.slider__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
 .slider__button {
   @include basic-text-fs16-lh20($main-font);
   background-color: transparent;
@@ -7,6 +17,10 @@
 }
 
 .slider__bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 84px;
   height: 14px;
   background: $primary-bg-color;

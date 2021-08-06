@@ -2,6 +2,30 @@
   background-color: $primary-grey-bg;
 }
 
+.footer__wrapper {
+  @media (min-width: $desktops) {
+    position: relative;
+  }
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0;
+  background-color: $primary-grey-bg;
+
+  @media (min-width: $tablets) {
+    padding: 66px 50px 51px;
+  }
+
+  @media (min-width: $desktops) {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+  }
+}
+
 .footer__contacts--index {
   background-color: $primary-bg-color;
 }
@@ -14,21 +38,55 @@
 .footer__contacts-address {
   @include plain-text-fs14($accent-font, $lineHeight: 20px);
   color: $grey-text;
+
+  @media (min-width: $tablets) {
+    text-align: right;
+  }
 }
 
 .footer__logo {
   cursor: pointer;
 }
 
+.footer__map-img {
+  width: 100%;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 42px 0 22px;
+
+  @media (min-width: $tablets) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer__list {
+  display: flex;
+  padding: 20px 0;
+}
+
 .footer__developer-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 280px;
   text-decoration: none;
+
+  @media (min-width: $tablets) {
+    width: 163px;
+  }
 }
 
 .footer__developer-link .footer__svg {
   fill: $footer-links-grey-color;
 }
 
-.footer__developer-link p {
+.footer__developer-text {
   color: $footer-links-grey-color;
   font-family: $accent-font;
   font-size: 16px;

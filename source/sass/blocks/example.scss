@@ -1,5 +1,51 @@
 .example {
   background-color: $secondary-grey-bg;
+
+  @media (min-width: $tablets) {
+    background-color: transparent;
+  }
+
+  @media (min-width: $desktops) {
+    background-image: linear-gradient(
+        to bottom,
+        $white 40%,
+        $primary-grey-bg 40%,
+        $primary-grey-bg 90%
+      ),
+      linear-gradient(to right, $primary-grey-bg 50%, $secondary-grey-bg 50%);
+  }
+}
+
+.example__list {
+  text-align: center;
+
+  @media (min-width: $tablets) {
+    width: 100%;
+  }
+}
+
+.example__container {
+  @media (min-width: $desktops) {
+    display: flex;
+  }
+}
+
+.example__info {
+  @media (min-width: $tablets) {
+    flex-basis: 50%;
+  }
+
+  @media (min-width: $desktops) {
+    flex-direction: column;
+    justify-content: flex-end;
+    display: flex;
+  }
+}
+
+.example__models {
+  @media (min-width: $tablets) {
+    flex-basis: 50%;
+  }
 }
 
 .example__main-title {
@@ -11,13 +57,26 @@
   color: $grey-text;
 }
 
-.example__list {
-  text-align: center;
+.example__layout {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: $desktops) {
+    width: 400px;
+  }
 }
 
 .example__table {
+  position: relative;
+  width: 124px;
+  min-height: 64px;
   border: 1px solid $border-color;
   border-radius: 3px;
+
+  @media (min-width: $tablets) {
+    width: 162px;
+  }
 }
 
 .example__in-numbers {
@@ -27,11 +86,39 @@
 
 .example__in-words {
   @include tables-basic-font-fs12($accent-font, $lineHeight: 12px);
+  position: absolute;
   color: $grey-text;
   background-color: $secondary-grey-bg;
+
+  @media (min-width: $tablets) {
+    background-color: $primary-bg-color;
+  }
+
+  @media (min-width: $tablets) {
+    background-color: $primary-grey-bg;
+  }
 }
 
-.example__table-result td {
+.example__table-result {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+
+  @media (min-width: $tablets) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $desktops) {
+    justify-content: flex-start;
+  }
+}
+
+.example__result-cost {
+  @include tables-basic-font-fs12($main-font, $lineHeight: 20px);
+  text-transform: uppercase;
+}
+
+.example__result-title {
   @include tables-basic-font-fs12($main-font, $lineHeight: 20px);
   text-transform: uppercase;
 }

@@ -6,4 +6,16 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  @media (min-width: $tablets) {
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: $desktops) {
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }

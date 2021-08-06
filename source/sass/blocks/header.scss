@@ -1,15 +1,29 @@
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablets) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo-pic-link {
+  display: block;
+  align-self: flex-start;
+  padding: 7px 0 17px;
+
+  @media (min-width: $tablets) {
+    padding: 0;
+    align-self: center;
+  }
+}
+
 .header__logo {
   cursor: pointer;
-}
 
-.header__nav-button {
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.header__nav-button span {
-  background-color: $special_dark-grey-3;
+  @media (min-width: $tablets) {
+    width: 174px;
+  }
 }

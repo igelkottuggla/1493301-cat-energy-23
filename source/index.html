@@ -16,11 +16,12 @@
                 </picture>
             </a>
 
-            <button class="header__nav-button" type="button" aria-label="Переключить меню">
-                <span></span>
-            </button>
+
 
             <nav class="header__nav nav">
+                <button class="nav__button" type="button" aria-label="Переключить меню">
+                  <span class="nav__burger"></span>
+                </button>
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a class="nav__link nav__link--active nav__link--index">Главная</a>
@@ -37,14 +38,14 @@
     </header>
 
     <main>
-        <section class="promo">
-            <div class="promo__wrapper wrapper">
+        <section class="promo wrapper">
+            <div class="promo__wrapper">
 
                 <div class="promo__info">
                     <h1 class="promo__main-title main-title">Функциональное питание для котов</h1>
                     <p class="promo__desc">Занялся собой? Займись котом!</p>
                     <picture>
-                        <img class="promo__pic" src="./img/promo/mobile/index-can-mobile@1x.png" alt="Корм для кошек Cat Energy с курицей">
+                        <img class="promo__pic" src="./img/promo/mobile/index-can-mobile@1x.png" alt="Корм для кошек Cat Energy с курицей" width="280" height="270">
                     </picture>
                     <a class="promo__link button button--activation" href="form.html">Подобрать программу</a>
 
@@ -176,7 +177,7 @@
                 <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span> </p>
             </div>
             <div class="footer__map" id="map">
-                <img src="./img/footer/map/mobile/bg-map-mobile@1x.png" alt="Мы на карте" height="360">
+                <img src="./img/footer/map/mobile/bg-map-mobile@1x.png" alt="Мы на карте" height="360" class="footer__map-img">
             </div>
 
             <div class="footer__links">
@@ -229,7 +230,7 @@
 
                 <div class="footer__block footer__block--copyright">
                     <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу интенсива по адаптивной верстке и автоматизации">
-                        <p>HTML Academy</p>
+                        <p class="footer__developer-text">HTML Academy</p>
                         <svg class="footer__svg footer__developer-icon" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 60 60" width="40" height="40">
                             <path  d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
                         </svg>

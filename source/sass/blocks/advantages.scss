@@ -2,6 +2,31 @@
   @include secondary-titles-fs36-lh40;
 }
 
+.advantages__list {
+  @media (min-width: $tablets) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+
+  @media (min-width: $desktops) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 60px;
+  }
+}
+
+.advantages__item {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablets) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 280px;
+  }
+}
+
 .advantages__list-description {
   @include plain-text-fs14-lh18($accent-font);
   color: $grey-text;

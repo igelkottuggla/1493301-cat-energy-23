@@ -1,5 +1,26 @@
+.categories__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $desktops) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .categories__item {
+  margin-bottom: 20px;
+  padding: 30px 33px 17px 20px;
   background-color: $primary-grey-bg;
+
+  @media (min-width: $tablets) {
+    padding: 77px 316px 53px 52px;
+  }
+
+  @media (min-width: $tablets) {
+    padding: 77px 51px 55px 52px;
+    width: 570px;
+  }
 }
 
 .categories__title {

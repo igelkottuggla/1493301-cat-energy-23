@@ -7,6 +7,11 @@
   text-align: center;
   border: none;
   cursor: pointer;
+
+  @media (min-width: $tablets) {
+    @include nav-links-fs20($main-font, 20px, $font-weight-normal);
+    color: $light-text;
+  }
 }
 
 .button--show-more {

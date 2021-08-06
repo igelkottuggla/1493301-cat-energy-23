@@ -1,12 +1,60 @@
+.nav {
+  position: relative;
+}
+
+.nav__button {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablets) {
+    display: none;
+  }
+}
+
+.nav__burger {
+  background-color: $special_dark-grey-3;
+}
+
+.nav__list {
+  @media (min-width: $tablets) {
+    display: flex;
+  }
+}
+
 .nav__item {
   text-align: center;
   border-top: 1px solid $nav-link-decor;
   border-bottom: 1px solid $nav-link-decor;
+
+  @media (min-width: $tablets) {
+    border: 0;
+  }
 }
 
 .nav__link {
-  @include nav-links-fs20-lh20;
+  @include nav-links-fs20($main-bold-font, 20px, $font-weight-bold);
+  display: block;
+  padding: 22px 0;
   color: $black-text;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: $tablets) {
+    @include nav-links-fs18-lh24($font-weight-normal);
+    padding: 42px 0;
+  }
+
+  @media (min-width: $desktops) {
+    @include nav-links-fs20($main-font, 30px, $font-weight-normal);
+  }
+}
+
+.nav__link--index {
+  @media (min-width: $desktops) {
+    color: $light-text;
+  }
 }
