@@ -1,8 +1,10 @@
 .categories__list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  @media (min-width: $desktops) {
+  @include media-desktop {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -10,32 +12,30 @@
 
 .categories__item {
   margin-bottom: 20px;
-  padding: 30px 33px 17px 20px;
   background-color: $primary-grey-bg;
 
-  @media (min-width: $tablets) {
-    padding: 77px 316px 53px 52px;
-  }
-
-  @media (min-width: $tablets) {
-    padding: 77px 51px 55px 52px;
-    width: 570px;
+  @include media-desktop {
+    width: calc(50% - 40px);
   }
 }
 
 .categories__title {
-  @include big-text-dark-fs24($lineHeight: 37px);
+  @include big-text-fs24;
+  line-height: 37px;
   text-transform: uppercase;
 }
 
 .categories__description {
-  @include plain-text-fs14-lh18($accent-font);
+  @include plain-text-fs14;
   color: $grey-text;
+
+  @include media-tablet {
+    @include basic-text-fs16-lh20;
+    line-height: 24px;
+  }
 }
 
 .categories__button {
-  @include dark-small-titles-fs16($lineHeight: 16px);
-  color: $black-text;
-  text-transform: uppercase;
-  text-decoration: none;
+  @include small-titles-fs16;
+  @include reset-style-link;
 }

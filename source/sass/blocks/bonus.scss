@@ -1,5 +1,6 @@
 .bonus {
-  @include basic-text-fs16-lh20($accent-font);
+  @include basic-text-fs16-lh20;
+  color: $light-text;
   min-height: 290px;
   background: $basic-green;
   background-image: url("../img/bonus/mobile/gift-photo-mobile@1x.jpg");
@@ -7,10 +8,10 @@
 }
 
 .bonus__link {
-  text-decoration: none;
+  @include reset-style-link;
 }
 
 .bonus__text {
-  @include basic-text-fs16-lh20($accent-font);
+  @include basic-text-fs16-lh20;
   color: $light-text;
 }

@@ -1,33 +1,40 @@
 .advantages__main-title {
   @include secondary-titles-fs36-lh40;
+
+  @include media-tablet {
+    @include title-fs60-lh60;
+  }
 }
 
 .advantages__list {
-  @media (min-width: $tablets) {
+  @include media-tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 154px;
+    row-gap: 37px;
   }
 
-  @media (min-width: $desktops) {
-    display: grid;
+  @include media-desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 60px;
+    column-gap: 94px;
   }
 }
 
 .advantages__item {
-  margin-bottom: 24px;
+  @include plain-text-fs14;
+  margin-bottom: 20px;
 
-  @media (min-width: $tablets) {
+  @include media-tablet {
+    @include basic-text-fs16-lh20;
+    line-height: 24px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: flex-end;
     min-height: 280px;
   }
 }
 
 .advantages__list-description {
-  @include plain-text-fs14-lh18($accent-font);
   color: $grey-text;
 }

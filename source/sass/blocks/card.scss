@@ -3,11 +3,12 @@
 }
 
 .card__title-link {
-  text-decoration: none;
+  @include reset-style-link;
 }
 
 .card__title {
-  @include basic-text-fs16-lh20($main-font);
+  @include basic-text-fs16-lh20;
+  font-family: $main-font;
   color: $dark-grey-text;
   text-transform: uppercase;
 }
@@ -17,18 +18,18 @@
 }
 
 .card__options-name {
-  @include tables-basic-font-fs12($accent-font, $lineHeight: 16px);
+  @include tables-basic-font-fs12;
   color: $grey-text;
 }
 
 .card__options-amount {
-  @include tables-basic-font-fs12($accent-font, $lineHeight: 16px);
+  @include tables-basic-font-fs12;
   color: $grey-text;
   text-align: right;
 }
 
 .card__more-goods {
-  @include tables-basic-font-fs12($accent-font, $lineHeight: 16px);
+  @include tables-basic-font-fs12;
   color: $grey-text;
   text-align: center;
 }

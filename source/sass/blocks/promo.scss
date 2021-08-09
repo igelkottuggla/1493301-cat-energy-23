@@ -9,15 +9,15 @@
   background-position: top center;
   background-repeat: no-repeat;
 
-  @media (min-width: $tablets) {
+  @include media-tablet {
     min-height: 870px;
     text-align: left;
     background-image: none;
     background-color: transparent;
   }
 
-  @media (min-width: $desktops) {
-    min-height: 550px;
+  @include media-desktop {
+    min-height: 650px;
     position: relative;
 
     &::before {
@@ -40,36 +40,36 @@
 .promo__main-title {
   color: $light-text;
 
-  @media (min-width: $tablets) {
-    @include title-fs60-lh60();
+  @include media-tablet {
+    @include title-fs60-lh60;
     color: $black-text;
   }
 
-  @media (min-width: $desktops) {
+  @include media-desktop {
     max-width: 450px;
   }
 }
 
 .promo__desc {
-  @include plain-text-fs14($main-font, $lineHeight: 14px);
-  margin-top: 25px;
-  margin-bottom: 32px;
+  @include plain-text-fs14;
+  line-height: 14px;
+  font-family: $main-font;
   color: $light-text;
   text-transform: uppercase;
 
-  @media (min-width: $tablets) {
-    @include nav-links-fs20($main-font, 20px, $font-weight-normal);
+  @include media-tablet {
+    line-height: 20px;
     color: $black-text;
   }
 }
 
 .promo__pic {
-  @media (min-width: $tablets) {
+  @include media-tablet {
     width: 709px;
     height: 609px;
   }
 
-  @media (min-width: $desktops) {
+  @include media-desktop {
     position: absolute;
     top: 0;
     left: 50%;

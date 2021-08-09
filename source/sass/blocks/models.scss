@@ -1,25 +1,20 @@
 .models {
-  @media (min-width: $tablets) {
+  @include media-tablet {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(
-      to bottom,
-      $white 30%,
-      $secondary-grey-bg 30%
-    );
+    justify-content: center;
+    align-items: center;
   }
 
-  @media (min-width: $desktops) {
+  @include media-desktop {
     background-image: none;
-  }
-}
-
-.models__images {
-  @media (min-width: $tablets) {
-    align-self: center;
   }
 }
 
 .models__img {
   width: auto;
+
+  @include media-desktop {
+    height: 536px;
+  }
 }

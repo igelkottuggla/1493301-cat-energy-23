@@ -1,24 +1,24 @@
 .footer {
+  position: relative;
   background-color: $primary-grey-bg;
-}
-
-.footer__wrapper {
-  @media (min-width: $desktops) {
-    position: relative;
-  }
 }
 
 .footer__contacts {
+  background-color: $primary-grey-bg;
+}
+
+.footer__contacts .wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 25px 0;
-  background-color: $primary-grey-bg;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
-  @media (min-width: $tablets) {
-    padding: 66px 50px 51px;
+  @include media-tablet {
+    padding: 66px 71px 51px;
   }
 
-  @media (min-width: $desktops) {
+  @include media-desktop {
     position: absolute;
     top: 95px;
     left: 110px;
@@ -26,26 +26,29 @@
   }
 }
 
-.footer__contacts--index {
+.footer__contacts--index .wrapper {
   background-color: $primary-bg-color;
 }
 
 .footer__contacts-title {
-  @include basic-text-fs16-lh20($main-font);
+  @include basic-text-fs16-lh20;
+  font-family: $main-font;
   text-transform: uppercase;
-}
 
-.footer__contacts-address {
-  @include plain-text-fs14($accent-font, $lineHeight: 20px);
-  color: $grey-text;
-
-  @media (min-width: $tablets) {
-    text-align: right;
+  @include media-tablet {
+    width: 26%;
   }
 }
 
-.footer__logo {
-  cursor: pointer;
+.footer__contacts-address {
+  @include plain-text-fs14;
+  line-height: 20px;
+  color: $grey-text;
+
+  @include media-tablet {
+    text-align: right;
+    width: 30%;
+  }
 }
 
 .footer__map-img {
@@ -57,37 +60,51 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 42px 0 22px;
+  padding-top: 42px;
+  padding-bottom: 42px;
 
-  @media (min-width: $tablets) {
+  @include media-tablet {
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
 .footer__list {
   display: flex;
-  padding: 20px 0;
+  justify-content: center;
+  align-items: center;
+
+  @include media-tablet {
+    margin-left: auto;
+  }
 }
 
 .footer__developer-link {
+  @include reset-style-link;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 280px;
-  text-decoration: none;
+  text-transform: none;
 
-  @media (min-width: $tablets) {
+  @include media-tablet {
     width: 163px;
   }
 }
 
 .footer__developer-link .footer__svg {
-  fill: $footer-links-grey-color;
+  fill: $fill-grey-icons;
 }
 
 .footer__developer-text {
-  color: $footer-links-grey-color;
-  font-family: $accent-font;
-  font-size: 16px;
+  @include basic-text-fs16-lh20;
+  line-height: 19px;
+  color: $fill-grey-icons;
+}
+
+.footer__block--copyright {
+  width: 100%;
+
+  @include media-tablet {
+    width: unset;
+    margin-left: auto;
+  }
 }

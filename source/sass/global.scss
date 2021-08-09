@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  @include basic-text-fs16-lh20($accent-font);
+  @include basic-text-fs16-lh20;
   color: $black-text;
   background-color: $primary-bg-color;
   display: flex;

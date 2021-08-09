@@ -1,17 +1,10 @@
 .button {
-  @include plain-text-fs14-lh18($main-font);
-  background-color: $basic-green;
-  text-transform: uppercase;
+  @include reset-style-button;
+  font-style: normal;
+  font-weight: $font-weight-normal;
+  font-size: 16px;
+  line-height: 20px;
   color: $light-text;
-  text-decoration: none;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-
-  @media (min-width: $tablets) {
-    @include nav-links-fs20($main-font, 20px, $font-weight-normal);
-    color: $light-text;
-  }
 }
 
 .button--show-more {
@@ -20,6 +13,7 @@
 }
 
 .button--buy {
-  @include basic-text-fs16-lh20($main-font);
+  @include basic-text-fs16-lh20;
+  font-family: $main-font;
   color: $light-text;
 }

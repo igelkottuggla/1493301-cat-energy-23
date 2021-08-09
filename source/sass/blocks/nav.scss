@@ -1,26 +1,5 @@
-.nav {
-  position: relative;
-}
-
-.nav__button {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  @media (min-width: $tablets) {
-    display: none;
-  }
-}
-
-.nav__burger {
-  background-color: $special_dark-grey-3;
-}
-
 .nav__list {
-  @media (min-width: $tablets) {
+  @include media-tablet {
     display: flex;
   }
 }
@@ -30,31 +9,28 @@
   border-top: 1px solid $nav-link-decor;
   border-bottom: 1px solid $nav-link-decor;
 
-  @media (min-width: $tablets) {
+  @include media-tablet {
     border: 0;
   }
 }
 
 .nav__link {
-  @include nav-links-fs20($main-bold-font, 20px, $font-weight-bold);
+  @include links-fs20;
+  @include reset-style-link;
   display: block;
-  padding: 22px 0;
-  color: $black-text;
-  text-transform: uppercase;
-  text-decoration: none;
 
-  @media (min-width: $tablets) {
-    @include nav-links-fs18-lh24($font-weight-normal);
-    padding: 42px 0;
+  @include media-tablet {
+    @include nav-links-fs18-lh24;
   }
 
-  @media (min-width: $desktops) {
-    @include nav-links-fs20($main-font, 30px, $font-weight-normal);
+  @include media-desktop {
+    font-weight: $font-weight-bold;
+    line-height: 30px;
   }
 }
 
 .nav__link--index {
-  @media (min-width: $desktops) {
+  @include media-desktop {
     color: $light-text;
   }
 }

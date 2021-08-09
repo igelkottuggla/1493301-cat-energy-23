@@ -1,29 +1,50 @@
 .header__wrapper {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 11px;
 
-  @media (min-width: $tablets) {
-    flex-direction: row;
+  @include media-tablet {
     justify-content: space-between;
-    align-items: center;
+    padding-top: 24px;
   }
+
+  @include media-desktop {
+    padding-top: 54px;
+  }
+}
+
+.header__nav-button {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.header__nav-burger {
+  display: block;
+  height: 2px;
+  width: 24px;
+  background-color: $fill-grey-icons;
 }
 
 .header__logo-pic-link {
   display: block;
-  align-self: flex-start;
-  padding: 7px 0 17px;
+  margin-right: auto;
 
-  @media (min-width: $tablets) {
+  @include media-tablet {
     padding: 0;
-    align-self: center;
   }
 }
 
 .header__logo {
-  cursor: pointer;
-
-  @media (min-width: $tablets) {
+  @include media-tablet {
     width: 174px;
   }
 }
