@@ -1,35 +1,110 @@
 .footer {
+  position: relative;
   background-color: $primary-grey-bg;
 }
 
-.footer__contacts--index {
+.footer__contacts {
+  background-color: $primary-grey-bg;
+}
+
+.footer__contacts .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include media-tablet {
+    padding: 66px 71px 51px;
+  }
+
+  @include media-desktop {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+    width: 570px;
+  }
+}
+
+.footer__contacts--index .wrapper {
   background-color: $primary-bg-color;
 }
 
 .footer__contacts-title {
-  @include basic-text-fs16-lh20($main-font);
+  @include basic-text-fs16-lh20;
+  font-family: $main-font;
   text-transform: uppercase;
+
+  @include media-tablet {
+    width: 26%;
+  }
 }
 
 .footer__contacts-address {
-  @include plain-text-fs14($accent-font, $lineHeight: 20px);
+  @include plain-text-fs14;
+  line-height: 20px;
   color: $grey-text;
+
+  @include media-tablet {
+    text-align: right;
+    width: 30%;
+  }
 }
 
-.footer__logo {
-  cursor: pointer;
+.footer__map-img {
+  width: 100%;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 42px;
+  padding-bottom: 42px;
+
+  @include media-tablet {
+    flex-direction: row;
+  }
+}
+
+.footer__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-tablet {
+    margin-left: auto;
+  }
 }
 
 .footer__developer-link {
-  text-decoration: none;
+  @include reset-style-link;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: none;
+
+  @include media-tablet {
+    width: 163px;
+  }
 }
 
 .footer__developer-link .footer__svg {
-  fill: $footer-links-grey-color;
+  fill: $fill-grey-icons;
 }
 
-.footer__developer-link p {
-  color: $footer-links-grey-color;
-  font-family: $accent-font;
-  font-size: 16px;
+.footer__developer-text {
+  @include basic-text-fs16-lh20;
+  line-height: 19px;
+  color: $fill-grey-icons;
+}
+
+.footer__block--copyright {
+  width: 100%;
+
+  @include media-tablet {
+    width: unset;
+    margin-left: auto;
+  }
 }

@@ -1,37 +1,124 @@
 .example {
   background-color: $secondary-grey-bg;
-}
 
-.example__main-title {
-  @include secondary-titles-fs36-lh40;
-}
-
-.example__description {
-  @include plain-text-fs14-lh18($accent-font);
-  color: $grey-text;
+  @include media-tablet {
+    background: linear-gradient(
+      180deg,
+      $primary-bg-color 0%,
+      $primary-bg-color 40%,
+      $primary-grey-bg 40%
+    );
+  }
 }
 
 .example__list {
   text-align: center;
+
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
+.example__container {
+  @include media-desktop {
+    display: grid;
+    grid-template-columns: 436px 1fr;
+    column-gap: 134px;
+  }
+}
+
+.example__info {
+  @include media-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.example__main-title {
+  @include secondary-titles-fs36-lh40;
+
+  @include media-tablet {
+    @include title-fs60-lh60;
+  }
+}
+
+.example__description {
+  @include plain-text-fs14;
+  color: $grey-text;
+
+  @include media-tablet {
+    @include basic-text-fs16-lh20;
+    line-height: 24px;
+  }
+}
+
+.example__layout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .example__table {
+  position: relative;
+  padding: 8px 24px;
+  width: 124px;
   border: 1px solid $border-color;
   border-radius: 3px;
+
+  @include media-tablet {
+    width: 162px;
+  }
 }
 
 .example__in-numbers {
-  @include secondary-subtitles-dark-fs24-lh24;
+  @include secondary-subtitles-fs24-lh24;
   text-transform: uppercase;
 }
 
 .example__in-words {
-  @include tables-basic-font-fs12($accent-font, $lineHeight: 12px);
+  @include tables-basic-font-fs12;
+  line-height: 12px;
+  position: absolute;
   color: $grey-text;
   background-color: $secondary-grey-bg;
+
+  @include media-tablet {
+    background-color: $primary-bg-color;
+  }
+
+  @include media-desktop {
+    background-color: $primary-grey-bg;
+  }
 }
 
-.example__table-result td {
-  @include tables-basic-font-fs12($main-font, $lineHeight: 20px);
+.example__table-result {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+
+  @include media-tablet {
+    justify-content: flex-end;
+  }
+
+  @include media-desktop {
+    justify-content: flex-start;
+  }
+}
+
+.example__result-cost {
+  @include tables-basic-font-fs12;
+  font-family: $main-font;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.example__result-title {
+  @include tables-basic-font-fs12;
+  font-family: $main-font;
+  line-height: 20px;
   text-transform: uppercase;
 }

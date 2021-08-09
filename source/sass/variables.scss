@@ -2,15 +2,15 @@
 $basic-bkgrnd: #e5e5e5;
 $basic-green: #68b738;
 $basic-green-2: #5eaa2f;
-$basic_light-grey: #f2f2f2;
-$basic_light-grey-2: #ebebeb;
+$basic-light-grey: #f2f2f2;
+$basic-light-grey-2: #ebebeb;
 $basic-dark-grey: #eaeaea;
 $grey: #c4c4c4;
-$special_grey: #cdcdcd;
+$special-grey: #cdcdcd;
 $special-light-grey: #d3d3d3;
-$special_dark-grey: #666666;
-$special_dark-grey-2: #444444;
-$special_dark-grey-3: #222222;
+$special-dark-grey: #666666;
+$special-dark-grey-2: #444444;
+$special-dark-grey-3: #222222;
 $grey-line: #d9d9d9;
 $grey-line-2: #e6e6e6;
 $status_error: #ff8282;
@@ -20,19 +20,21 @@ $light-black: #111111;
 
 $black-text: $black;
 $light-text: $white;
+$button-color: $basic-green;
 $nav-link-decor: $grey-line-2;
-$grey-text: $special_dark-grey-2;
-$dark-grey-text: $special_dark-grey-3;
+$grey-text: $special-dark-grey-2;
+$dark-grey-text: $special-dark-grey-3;
+$currentColor: inherit;
 
 $font-weight-normal: 400;
 $font-weight-bold: 500;
 
 $primary-bg-color: $white;
-$primary-grey-bg: $basic_light-grey;
+$primary-grey-bg: $basic-light-grey;
 $secondary-grey-bg: $basic-dark-grey;
-$border-color: $special_grey;
-$light-border: $basic_light-grey-2;
-$footer-links-grey-color: $special_dark-grey;
+$border-color: $special-grey;
+$light-border: $basic-light-grey-2;
+$fill-grey-icons: $special-dark-grey;
 
 /*Fonts*/
 $main-font: "Oswald Regular", "Arial", sans-serif;
@@ -41,3 +43,5 @@ $accent-font: "Arial", sans-serif;
 
 /* Sizes and breakpoints*/
 $phones: 320px;
+$tablets: 768px;
+$desktops: 1440px;

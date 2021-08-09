@@ -1,5 +1,18 @@
-.header__logo {
-  cursor: pointer;
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 11px;
+
+  @include media-tablet {
+    justify-content: space-between;
+    padding-top: 24px;
+  }
+
+  @include media-desktop {
+    padding-top: 54px;
+  }
 }
 
 .header__nav-button {
@@ -8,8 +21,30 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @include media-tablet {
+    display: none;
+  }
 }
 
-.header__nav-button span {
-  background-color: $special_dark-grey-3;
+.header__nav-burger {
+  display: block;
+  height: 2px;
+  width: 24px;
+  background-color: $fill-grey-icons;
+}
+
+.header__logo-pic-link {
+  display: block;
+  margin-right: auto;
+
+  @include media-tablet {
+    padding: 0;
+  }
+}
+
+.header__logo {
+  @include media-tablet {
+    width: 174px;
+  }
 }

@@ -1,12 +1,36 @@
+.nav__list {
+  @include media-tablet {
+    display: flex;
+  }
+}
+
 .nav__item {
   text-align: center;
   border-top: 1px solid $nav-link-decor;
   border-bottom: 1px solid $nav-link-decor;
+
+  @include media-tablet {
+    border: 0;
+  }
 }
 
 .nav__link {
-  @include nav-links-fs20-lh20;
-  color: $black-text;
-  text-transform: uppercase;
-  text-decoration: none;
+  @include links-fs20;
+  @include reset-style-link;
+  display: block;
+
+  @include media-tablet {
+    @include nav-links-fs18-lh24;
+  }
+
+  @include media-desktop {
+    font-weight: $font-weight-bold;
+    line-height: 30px;
+  }
+}
+
+.nav__link--index {
+  @include media-desktop {
+    color: $light-text;
+  }
 }

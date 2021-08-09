@@ -1,9 +1,21 @@
 .wrapper {
   margin: 0 auto;
 
-  @media (min-width: $phones) {
+  @include media-mobile {
     width: 320px;
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  @include media-tablet {
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include media-desktop {
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
