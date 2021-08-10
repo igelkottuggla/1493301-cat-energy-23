@@ -13,6 +13,7 @@
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
+  background-color: $primary-bg-color;
 
   @include media-tablet {
     padding: 66px 71px 51px;
@@ -36,7 +37,9 @@
   text-transform: uppercase;
 
   @include media-tablet {
-    width: 26%;
+    font-size: 20px;
+    line-height: 21px;
+    width: 30%;
   }
 }
 
@@ -46,8 +49,9 @@
   color: $grey-text;
 
   @include media-tablet {
+    @include basic-text-fs16-lh20;
     text-align: right;
-    width: 30%;
+    width: 40%;
   }
 }
 

@@ -47,6 +47,10 @@
   font-style: $fontStyle;
 }
 
+@mixin order-text-fs20-lh30 {
+  @include font($main-font, 20px, 30px, $font-weight-normal, normal);
+}
+
 @mixin title-fs36-lh36 {
   @include font($main-font, 36px, 36px, $font-weight-normal, normal);
 }

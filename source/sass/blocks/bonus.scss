@@ -4,11 +4,23 @@
   min-height: 290px;
   background: $basic-green;
   background-image: url("../img/bonus/mobile/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
   text-align: center;
+
+  @include media-tablet {
+    width: 100%;
+  }
+
+  @include media-desktop {
+    width: 289px;
+    margin-left: auto;
+  }
 }
 
 .bonus__link {
   @include reset-style-link;
+  text-transform: none;
 }
 
 .bonus__text {
