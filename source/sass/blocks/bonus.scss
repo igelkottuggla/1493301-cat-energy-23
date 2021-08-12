@@ -12,10 +12,9 @@
     width: 100%;
   }
 
-  @include media-desktop {
-    width: 289px;
-    margin-left: auto;
-  }
+  // @include media-desktop {
+  //   margin-left: auto;
+  // }
 }
 
 .bonus__link {

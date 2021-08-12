@@ -5,8 +5,9 @@
   align-items: center;
 
   @include media-desktop {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
   }
 }
 
@@ -38,7 +39,7 @@
 
 .order__label {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-label-lh;
   text-transform: uppercase;
   color: $grey-text;
 
@@ -57,7 +58,7 @@
 
 .order__input {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-input-lh;
   color: $grey-text;
 
   @include media-tablet {
@@ -91,7 +92,7 @@
 
 .order__comment-field::placeholder {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-input-lh;
   text-transform: uppercase;
 
   @include media-tablet {
@@ -114,15 +115,15 @@
 
 .order__button {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-btn-lh;
 
   @include media-tablet {
-    font-size: 20px;
+    font-size: $btn-tablet-fs;
   }
 }
 
 .order__footnote-text {
   @include plain-text-fs14;
-  line-height: 16px;
+  line-height: $order-footnote-lh;
   text-align: center;
 }

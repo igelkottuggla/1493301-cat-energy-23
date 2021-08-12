@@ -50,7 +50,7 @@
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
-    line-height: 24px;
+    line-height: $basic-text-tablet-lh;
   }
 }
 
@@ -80,7 +80,7 @@
 
 .example__in-words {
   @include tables-basic-font-fs12;
-  line-height: 12px;
+  line-height: $example-table-lh;
   position: absolute;
   color: $grey-text;
   background-color: $secondary-grey-bg;
@@ -112,13 +112,13 @@
 .example__result-cost {
   @include tables-basic-font-fs12;
   font-family: $main-font;
-  line-height: 20px;
+  line-height: $example-result-lh;
   text-transform: uppercase;
 }
 
 .example__result-title {
   @include tables-basic-font-fs12;
   font-family: $main-font;
-  line-height: 20px;
+  line-height: $example-result-lh;
   text-transform: uppercase;
 }

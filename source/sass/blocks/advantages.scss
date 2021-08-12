@@ -26,7 +26,7 @@
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
-    line-height: 24px;
+    line-height: $basic-text-tablet-lh;
     display: flex;
     flex-direction: column;
     align-items: center;

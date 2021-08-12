@@ -37,15 +37,15 @@
   text-transform: uppercase;
 
   @include media-tablet {
-    font-size: 20px;
-    line-height: 21px;
+    font-size: $footer-contacts-tablet-fs;
+    line-height: $footer-contacts-tablet-lh;
     width: 30%;
   }
 }
 
 .footer__contacts-address {
   @include plain-text-fs14;
-  line-height: 20px;
+  line-height: $footer-adress-tablet-lh;
   color: $grey-text;
 
   @include media-tablet {
@@ -100,7 +100,7 @@
 
 .footer__developer-text {
   @include basic-text-fs16-lh20;
-  line-height: 19px;
+  line-height: $footer-dev-link-lh;
   color: $fill-grey-icons;
 }
 

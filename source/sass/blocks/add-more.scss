@@ -11,20 +11,29 @@
   }
 
   @include media-desktop {
-    flex-direction: row;
+    @include media-desktop {
+      display: grid;
+      grid-template-areas: "heading heading" "goods add-more";
+      grid-template-columns: 1fr 245px;
+      grid-column-gap: 79px;
+    }
   }
 }
 
 .add-more__heading {
   @include secondary-subtitles-fs24-lh24;
   width: 100%;
+
+  @include media-desktop {
+    grid-area: heading;
+  }
 }
 
 .add-more__goods {
   width: 100%;
 
   @include media-desktop {
-    width: calc(100% - 367px);
+    grid-area: goods;
   }
 }
 
@@ -42,26 +51,27 @@
   text-transform: uppercase;
 
   @include media-tablet {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: $catalog-subtitle-tablet-fs;
+    line-height: $catalog-subtitle-tablet-lh;
   }
 }
 
 .add-more__card {
   @include media-tablet {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
   }
 }
 
 .add-more__amount {
   @include plain-text-fs14;
-  line-height: 14px;
+  line-height: $add-more-amount-lh;
   color: $grey-text;
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
+    margin-left: auto;
   }
 }
 

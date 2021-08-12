@@ -21,7 +21,7 @@
 
 .categories__title {
   @include big-text-fs24;
-  line-height: 37px;
+  line-height: $categoris-tablet-lh;
   text-transform: uppercase;
 }
 
@@ -31,7 +31,7 @@
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
-    line-height: 24px;
+    line-height: $basic-text-tablet-lh;
   }
 }
 
