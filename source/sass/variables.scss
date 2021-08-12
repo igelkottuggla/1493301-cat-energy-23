@@ -18,6 +18,7 @@ $white: #ffffff;
 $black: #000000;
 $light-black: #111111;
 
+/* Text colors */
 $black-text: $black;
 $light-text: $white;
 $button-color: $basic-green;
@@ -26,15 +27,44 @@ $grey-text: $special-dark-grey-2;
 $dark-grey-text: $special-dark-grey-3;
 $currentColor: inherit;
 
-$font-weight-normal: 400;
-$font-weight-bold: 500;
-
+/* BG colors */
 $primary-bg-color: $white;
 $primary-grey-bg: $basic-light-grey;
 $secondary-grey-bg: $basic-dark-grey;
+
+/* Elements' colors */
 $border-color: $special-grey;
 $light-border: $basic-light-grey-2;
 $fill-grey-icons: $special-dark-grey;
+
+/* Font weight */
+$font-weight-normal: 400;
+$font-weight-bold: 500;
+
+/*Text sizes & line height */
+$basic-text-tablet-lh: 24px;
+$plain-test-lh: 14px;
+$plain-text-tablet-lh: 20px;
+
+$btn-tablet-fs: 20px;
+
+$footer-contacts-tablet-fs: 20px;
+$footer-contacts-tablet-lh: 21px;
+$footer-adress-tablet-lh: 20px;
+$footer-dev-link-lh: 19px;
+
+$nav-desltop-lh: 30px;
+$categoris-tablet-lh: 37px;
+$example-table-lh: 12px;
+$example-result-lh: 20px;
+$card-table-tablet-fs: 16px;
+$catalog-subtitle-tablet-fs: 20px;
+$catalog-subtitle-tablet-lh: 20px;
+$add-more-amount-lh: 14px;
+$order-input-lh: 18px;
+$order-btn-lh: 18px;
+$order-footnote-lh: 16px;
+$order-label-lh: 18px;
 
 /*Fonts*/
 $main-font: "Oswald Regular", "Arial", sans-serif;

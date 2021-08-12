@@ -1,7 +1,36 @@
+.order__cats-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include media-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 80px;
+  }
+}
+
+.order__details {
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
+.order__aim {
+  @include media-tablet {
+    width: 100%;
+  }
+}
+
 .order__desc {
   @include plain-text-fs14;
   font-family: $main-font;
   text-transform: uppercase;
+
+  @include media-tablet {
+    @include order-text-fs20-lh30;
+  }
 }
 
 .order__control-groups {
@@ -10,9 +39,13 @@
 
 .order__label {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-label-lh;
   text-transform: uppercase;
   color: $grey-text;
+
+  @include media-tablet {
+    @include order-text-fs20-lh30;
+  }
 }
 
 .order__aim .order__label {
@@ -25,8 +58,12 @@
 
 .order__input {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-input-lh;
   color: $grey-text;
+
+  @include media-tablet {
+    @include order-text-fs20-lh30;
+  }
 }
 
 .order__input::placeholder {
@@ -35,21 +72,58 @@
 
 .order__fildset-title {
   @include big-text-fs24;
+
+  @include media-tablet {
+    @include title-fs36-lh36;
+  }
+}
+
+.order__comment-field {
+  width: 100%;
+
+  @include media-tablet {
+    width: calc(100% - 36px);
+  }
+
+  @include media-desktop {
+    width: 100%;
+  }
 }
 
 .order__comment-field::placeholder {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-input-lh;
   text-transform: uppercase;
+
+  @include media-tablet {
+    @include order-text-fs20-lh30;
+  }
+}
+
+.order__extra-wrapper {
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 123px;
+  }
+
+  @include media-desktop {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 104px;
+  }
 }
 
 .order__button {
   @include small-titles-fs16;
-  line-height: 18px;
+  line-height: $order-btn-lh;
+
+  @include media-tablet {
+    font-size: $btn-tablet-fs;
+  }
 }
 
 .order__footnote-text {
   @include plain-text-fs14;
-  line-height: 16px;
+  line-height: $order-footnote-lh;
   text-align: center;
 }

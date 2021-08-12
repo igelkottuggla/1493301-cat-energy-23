@@ -13,6 +13,7 @@
   align-items: center;
   padding-top: 25px;
   padding-bottom: 25px;
+  background-color: $primary-bg-color;
 
   @include media-tablet {
     padding: 66px 71px 51px;
@@ -36,18 +37,21 @@
   text-transform: uppercase;
 
   @include media-tablet {
-    width: 26%;
+    font-size: $footer-contacts-tablet-fs;
+    line-height: $footer-contacts-tablet-lh;
+    width: 30%;
   }
 }
 
 .footer__contacts-address {
   @include plain-text-fs14;
-  line-height: 20px;
+  line-height: $footer-adress-tablet-lh;
   color: $grey-text;
 
   @include media-tablet {
+    @include basic-text-fs16-lh20;
     text-align: right;
-    width: 30%;
+    width: 40%;
   }
 }
 
@@ -96,7 +100,7 @@
 
 .footer__developer-text {
   @include basic-text-fs16-lh20;
-  line-height: 19px;
+  line-height: $footer-dev-link-lh;
   color: $fill-grey-icons;
 }
 

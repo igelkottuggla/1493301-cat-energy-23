@@ -52,13 +52,13 @@
 
 .promo__desc {
   @include plain-text-fs14;
-  line-height: 14px;
+  line-height: $plain-test-lh;
   font-family: $main-font;
   color: $light-text;
   text-transform: uppercase;
 
   @include media-tablet {
-    line-height: 20px;
+    line-height: $plain-text-tablet-lh;
     color: $black-text;
   }
 }

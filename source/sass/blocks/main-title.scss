@@ -1,3 +1,7 @@
 .main-title {
   @include title-fs36-lh36;
+
+  @include media-tablet {
+    @include title-fs60-lh60;
+  }
 }

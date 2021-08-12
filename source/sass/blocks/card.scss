@@ -11,6 +11,11 @@
   font-family: $main-font;
   color: $dark-grey-text;
   text-transform: uppercase;
+
+  @include media-tablet {
+    font-size: $catalog-subtitle-tablet-fs;
+    text-align: center;
+  }
 }
 
 .card__title--more {
@@ -20,12 +25,20 @@
 .card__options-name {
   @include tables-basic-font-fs12;
   color: $grey-text;
+
+  @include media-tablet {
+    font-size: $card-table-tablet-fs;
+  }
 }
 
 .card__options-amount {
   @include tables-basic-font-fs12;
   color: $grey-text;
   text-align: right;
+
+  @include media-tablet {
+    font-size: $card-table-tablet-fs;
+  }
 }
 
 .card__more-goods {

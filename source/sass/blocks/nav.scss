@@ -25,7 +25,7 @@
 
   @include media-desktop {
     font-weight: $font-weight-bold;
-    line-height: 30px;
+    line-height: $nav-desltop-lh;
   }
 }
 

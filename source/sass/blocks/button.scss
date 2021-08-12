@@ -5,6 +5,10 @@
   font-size: 16px;
   line-height: 20px;
   color: $light-text;
+
+  @include media-tablet {
+    font-size: $btn-tablet-fs;
+  }
 }
 
 .button--show-more {
@@ -14,6 +18,7 @@
 
 .button--buy {
   @include basic-text-fs16-lh20;
+  display: block;
   font-family: $main-font;
   color: $light-text;
 }
