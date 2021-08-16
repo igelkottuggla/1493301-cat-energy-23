@@ -11,12 +11,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-bottom: 25px;
   background-color: $primary-bg-color;
 
   @include media-tablet {
-    padding: 66px 71px 51px;
+    padding: 66px 71px 56px;
   }
 
   @include media-desktop {
@@ -43,20 +43,54 @@
   }
 }
 
+.footer__contacts-city {
+  @include media-tablet {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
 .footer__contacts-address {
   @include plain-text-fs14;
+  margin-left: 27px;
   line-height: $footer-adress-tablet-lh;
   color: $grey-text;
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
     text-align: right;
-    width: 40%;
+    width: 30%;
   }
 }
 
 .footer__map-img {
   width: 100%;
+
+  @include media-tablet {
+    height: 400px;
+  }
+}
+
+.footer__block--logo {
+  margin-bottom: 30px;
+
+  @include media-tablet {
+    margin: 0;
+  }
+}
+
+.footer__logo-img {
+  @include media-tablet {
+    max-width: unset;
+  }
+}
+
+.footer__logo-img:hover {
+  opacity: 0.8;
+}
+
+.footer__logo-img:active {
+  opacity: 0.6;
 }
 
 .footer__links {
@@ -68,6 +102,7 @@
   padding-bottom: 42px;
 
   @include media-tablet {
+    padding-top: 51px;
     flex-direction: row;
   }
 }
@@ -76,10 +111,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 18px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 
   @include media-tablet {
     margin-left: auto;
+    border: none;
+    padding: 0;
   }
+}
+
+.social__item:first-of-type {
+  margin-right: 36px;
+}
+
+.social__item:last-of-type {
+  margin-left: 33px;
 }
 
 .footer__developer-link {
@@ -87,15 +137,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 18px;
   text-transform: none;
 
   @include media-tablet {
     width: 163px;
+    margin: 0;
   }
 }
 
 .footer__developer-link .footer__svg {
   fill: $fill-grey-icons;
+}
+
+.footer__developer-link:hover .footer__svg {
+  fill: $primary-green-bg;
+}
+
+.footer__developer-link:active {
+  opacity: 0.3;
+}
+
+.footer__developer-link:active .footer__svg {
+  fill: $primary-green-bg;
+  opacity: 0.3;
 }
 
 .footer__developer-text {

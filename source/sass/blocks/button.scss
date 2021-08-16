@@ -1,14 +1,27 @@
 .button {
   @include reset-style-button;
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 9px;
   font-style: normal;
   font-weight: $font-weight-normal;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   color: $light-text;
 
   @include media-tablet {
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: $btn-tablet-fs;
   }
+}
+
+.button:hover {
+  background-color: $btn-hover-color;
+}
+
+.button:active {
+  color: $partial-opacity-white;
 }
 
 .button--show-more {

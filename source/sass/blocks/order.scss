@@ -29,7 +29,7 @@
   text-transform: uppercase;
 
   @include media-tablet {
-    @include order-text-fs20-lh30;
+    @include text-fs20-lh30;
   }
 }
 
@@ -44,7 +44,7 @@
   color: $grey-text;
 
   @include media-tablet {
-    @include order-text-fs20-lh30;
+    @include text-fs20-lh30;
   }
 }
 
@@ -62,7 +62,7 @@
   color: $grey-text;
 
   @include media-tablet {
-    @include order-text-fs20-lh30;
+    @include text-fs20-lh30;
   }
 }
 
@@ -96,7 +96,7 @@
   text-transform: uppercase;
 
   @include media-tablet {
-    @include order-text-fs20-lh30;
+    @include text-fs20-lh30;
   }
 }
 

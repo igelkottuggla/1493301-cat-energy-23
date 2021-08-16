@@ -1,11 +1,21 @@
 .slider {
   position: relative;
+  margin-top: 33px;
   width: 100%;
+
+  @include media-tablet {
+    margin-top: 25px;
+    margin-bottom: 67px;
+  }
+
+  @include media-desktop {
+    margin-top: 30px;
+  }
 }
 
 .slider__button-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -14,24 +24,107 @@
   @include reset-style-button;
   font-family: $main-font;
   background-color: transparent;
+
+  @include media-tablet {
+    @include text-fs20-lh30;
+    border-bottom: 1px dotted $light-border;
+  }
+}
+
+.slider__button:hover {
+  border-bottom: 1px solid $light-border;
+}
+
+.slider__button:active {
+  border-bottom: none;
+}
+
+.slider__button--before {
+  margin-left: 37px;
+
+  @include media-tablet {
+    margin-left: 67px;
+  }
+
+  @include media-desktop {
+    margin-left: 73px;
+  }
+}
+
+.slider__button--after {
+  margin-left: auto;
+  margin-right: 35px;
+
+  @include media-tablet {
+    margin-right: 62px;
+  }
+
+  @include media-desktop {
+    margin-right: 23px;
+  }
 }
 
 .slider__bar {
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 84px;
   height: 14px;
   background: $primary-bg-color;
   border: 1px solid $border-color;
   border-radius: 6px;
+
+  @include media-tablet {
+    width: 428px;
+    height: 6px;
+    background-color: $slider-bar-bg;
+  }
+
+  @include media-desktop {
+    transform: translateX(-45%);
+  }
 }
 
 .slider__toggle {
+  position: absolute;
   width: 35px;
   height: 6px;
+  top: 3px;
+  left: 6px;
   background: $basic-green;
   border-radius: 6px;
   border: none;
+  cursor: pointer;
+
+  @include media-tablet {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary-bg-color;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: $green-bg-color;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.slider__toggle:hover {
+  box-shadow: $slider-box-shadow;
+}
+
+.slider__toggle:active {
+  border: 1px solid $button-color;
+  box-shadow: $slider-box-shadow;
 }

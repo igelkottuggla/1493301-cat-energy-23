@@ -19,7 +19,12 @@
                 <span class="header__nav-burger"></span>
             </button>
 
-            <nav class="header__nav nav">
+            <!-- class: no--js, menu is open
+            class: header__nav--opened, opens menu using JS
+            class: header__nav--closed, closes menu using JS
+            class: header__nav-burger--closed, toggles the burger button using JS -->
+
+            <nav class="header__nav nav no--js">
 
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -141,7 +146,7 @@
                                     <img src="./img/models/mobile/before-mobile@1x.png" class="models__img" alt="Cat before dieat">
                                 </picture>
                             </div>
-                            <div class="models__after visually-hidden">
+                            <div class="models__after">
                                 <picture>
                                     <img src="./img/models/mobile/after-mobile@1x.png" class="models__img" alt="Cat after diet">
                                 </picture>
@@ -173,7 +178,7 @@
           <div class="footer__contacts footer__contacts--index">
             <div class="wrapper">
                 <h2 class="footer__contacts-title">Приглашаем к сотрудничеству дилеров!</h2>
-                <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span> </p>
+                <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span class="footer__contacts-city">Санкт-Петербург</span> </p>
             </div>
 
           </div>
@@ -184,7 +189,7 @@
           <div class="footer__links wrapper">
               <div class="footer__block footer__block--logo">
                   <a class="footer__logo footer__logo--footer">
-                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo">
+                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo" class="footer__logo-img">
                   </a>
               </div>
 
@@ -239,5 +244,6 @@
               </div>
           </div>
     </footer>
+    <script src="js/menu-toggle.js"></script>
 </body>
 </html>
