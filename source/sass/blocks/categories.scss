@@ -195,7 +195,7 @@
 
 .categories__button:hover {
   &::before {
-    background-image: url("../../img/svg/icon-right-arrow-verylong.svg");
+    background-image: url("../img/svg/icon-right-arrow-verylong.svg");
   }
 }
 
@@ -203,6 +203,6 @@
   opacity: 0.3;
 
   &::before {
-    background-image: url("../../img/svg/icon-right-arrow-verylong.svg");
+    background-image: url("../img/svg/icon-right-arrow-verylong.svg");
   }
 }
