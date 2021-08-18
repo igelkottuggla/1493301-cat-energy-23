@@ -1,12 +1,38 @@
+.header {
+  position: relative;
+
+  .header__nav-button {
+    display: block;
+
+    @include media-tablet {
+      display: none;
+    }
+  }
+
+  .header__nav {
+    transform: scaleY(0);
+    height: 0;
+
+    @include media-tablet {
+      transform: none;
+      height: 100%;
+      transition: none;
+      animation: none;
+    }
+  }
+}
+
 .header__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 11px;
+  padding-bottom: 16px;
 
   @include media-tablet {
     padding-top: 30px;
+    padding-bottom: 0;
   }
 
   @include media-desktop {
@@ -70,7 +96,7 @@
   }
 }
 
-.header__logo:hover {
+.header__logo[href]:hover {
   opacity: 0.8;
 }
 
@@ -78,39 +104,38 @@
   opacity: 0.6;
 }
 
-.no--js {
-  transform: scaleY(1);
+.header.header--no-js {
+  .header__nav-button {
+    display: none;
+  }
+
+  .header__nav {
+    transform: scaleY(1);
+    background-color: $currentColor;
+  }
 }
 
-.header__nav--opened {
-  transform: scaleY(1);
-  animation: showAnimation 0.9s ease-in-out;
-  transition: height 1.3s ease-in-out;
-}
+.header.header--opened {
+  .header__nav-button {
+    .header__nav-burger::before {
+      left: -5px;
+      transform: rotate(45deg) translate(9px, 2px);
+    }
 
-.header__nav-burger--closed::before {
-  left: -10px;
-  transform: rotate(45deg) translate(11px, 2px);
-}
+    .header__nav-burger::after {
+      left: -8px;
+      transform: rotate(-45deg) translate(12px, 0);
+    }
 
-.header__nav-burger--closed::after {
-  left: -10px;
-  transform: rotate(-45deg) translate(9px, 0);
-}
+    .header__nav-burger {
+      background-color: transparent;
+    }
+  }
 
-.header__nav-burger--closed {
-  background-color: transparent;
-}
-
-.header__nav--closed {
-  transform: scaleY(0);
-  height: 0;
-
-  @include media-tablet {
-    transform: none;
-    height: 100%;
-    transition: none;
-    animation: none;
+  .header__nav {
+    transform: scaleY(1);
+    animation: showAnimation 0.9s ease-in-out;
+    transition: height 1.3s ease-in-out;
   }
 }
 

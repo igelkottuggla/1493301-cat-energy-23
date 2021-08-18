@@ -84,9 +84,11 @@
   content: "";
   width: 60px;
   height: 60px;
+  left: 0;
   background-color: $green-bg-color;
   background-repeat: no-repeat;
-  left: 0;
+  background-position: center;
+  background-size: 30px 32px;
 
   @include media-tablet {
     width: 80px;
@@ -97,27 +99,19 @@
 }
 
 .advantages__item--leaf::before {
-  background-image: url("../img/advantages/advantage-leaf@1x.png");
-  background-size: 50px 50px;
-  background-position: center;
+  background-image: url("../img/advantages/advantage-leaf.svg");
 }
 
 .advantages__item--powder::before {
-  background-image: url("../img/advantages/advantage-powder@1x.png");
-  background-size: 50px 50px;
-  background-position: center;
+  background-image: url("../img/advantages/advantage-powder.svg");
 }
 
 .advantages__item--meals::before {
-  background-image: url("../img/advantages/advantage-dining@1x.png");
-  background-size: 50px 50px;
-  background-position: center;
+  background-image: url("../img/advantages/advantage-dining.svg");
 }
 
 .advantages__item--time::before {
-  background-image: url("../img/advantages/advantage-clock@1x.png");
-  background-size: 50px 50px;
-  background-position: center;
+  background-image: url("../../img/advantages/advantage-clock.svg");
 }
 
 .advantages__list-description {

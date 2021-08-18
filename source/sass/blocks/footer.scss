@@ -63,8 +63,12 @@
   }
 }
 
-.footer__map-img {
+.footer__map {
+  height: 360px;
   width: 100%;
+  background-image: url("../../img/footer/map/mobile/bg-map-mobile@1x.png");
+  background-position: center center;
+  background-size: cover;
 
   @include media-tablet {
     height: 400px;
@@ -114,8 +118,8 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 18px;
-  border-top: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid $grey-border;
+  border-bottom: 1px solid $grey-border;
 
   @include media-tablet {
     margin-left: auto;
@@ -139,6 +143,7 @@
   align-items: center;
   margin-top: 18px;
   text-transform: none;
+  color: $grey-text;
 
   @include media-tablet {
     width: 163px;
@@ -146,27 +151,19 @@
   }
 }
 
-.footer__developer-link .footer__svg {
-  fill: $fill-grey-icons;
-}
-
-.footer__developer-link:hover .footer__svg {
-  fill: $primary-green-bg;
+.footer__developer-link:hover {
+  color: $green-color-links;
 }
 
 .footer__developer-link:active {
-  opacity: 0.3;
-}
-
-.footer__developer-link:active .footer__svg {
-  fill: $primary-green-bg;
+  color: $green-color-links;
   opacity: 0.3;
 }
 
 .footer__developer-text {
   @include basic-text-fs16-lh20;
   line-height: $footer-dev-link-lh;
-  color: $fill-grey-icons;
+  color: $grey-text;
 }
 
 .footer__block--copyright {

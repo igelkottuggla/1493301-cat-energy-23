@@ -1,13 +1,13 @@
-.social__svg {
-  fill: $fill-grey-icons;
+.social__link {
+  color: $grey-text;
 }
 
-.social__svg:hover {
-  fill: $primary-green-bg;
+.social__link:hover {
+  color: $green-color-links;
 }
 
-.social__svg:active {
-  fill: $primary-green-bg;
+.social__link:active {
+  color: $green-color-links;
   opacity: 0.3;
 }
 

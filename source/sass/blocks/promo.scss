@@ -4,10 +4,10 @@
   min-height: 460px;
   text-align: center;
   background-image: url("../img/promo/mobile/index-background-mobile@1x.jpg"),
-    linear-gradient(to top, $white 170px, $basic-green 110px);
-  background-size: 100% 302px;
-  background-position: top center;
-  background-repeat: no-repeat;
+    linear-gradient(to top, $white 0, $promo-bg 0);
+  background-size: 280px 302px, 100% 302px;
+  background-position: top center, top center;
+  background-repeat: no-repeat, no-repeat;
 
   @include media-tablet {
     min-height: 843px;

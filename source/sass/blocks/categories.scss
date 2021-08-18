@@ -52,7 +52,7 @@
   width: 50px;
   height: 50px;
   top: 25px;
-  background: $categories-decor-bg;
+  background-color: $categories-decor-bg;
   border-radius: 50%;
 
   @include media-tablet {
@@ -169,6 +169,7 @@
 .categories__button {
   @include small-titles-fs16;
   @include reset-style-link;
+  padding-right: 60px;
   position: relative;
 
   @include media-tablet {
@@ -192,6 +193,16 @@
   }
 }
 
+.categories__button:hover {
+  &::before {
+    background-image: url("../../img/svg/icon-right-arrow-verylong.svg");
+  }
+}
+
 .categories__button:active {
   opacity: 0.3;
+
+  &::before {
+    background-image: url("../../img/svg/icon-right-arrow-verylong.svg");
+  }
 }

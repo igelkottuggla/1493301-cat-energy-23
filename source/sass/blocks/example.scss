@@ -108,7 +108,7 @@
   }
 }
 
-.example__table:nth-child(2) {
+.example__table--space {
   margin-left: auto;
 
   @include media-tablet {
@@ -136,12 +136,16 @@
 .example__in-words {
   @include tables-basic-font-fs12;
   position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translate(-50%, 50%);
   width: 84px;
   line-height: $example-table-lh;
   color: $grey-text;
   background-color: $secondary-grey-bg;
 
   @include media-tablet {
+    bottom: 0;
     font-size: $example-table-fs;
     line-height: $example-words-table-tablet-lh;
     background-color: $primary-bg-color;

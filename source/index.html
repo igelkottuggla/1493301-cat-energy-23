@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <link type="text/css" rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Cat energy</title>
 </head>
 
 <body>
-    <header class="header header--index">
+    <!-- class: header--no-js, menu is open, button is hidden
+      class: header--opened, toggles menu using JS, toggles nav-burger -->
+
+    <header class="header header--index header--no-js">
         <div class="header__wrapper wrapper">
             <a class="header__logo-pic-link">
                 <picture>
@@ -19,12 +23,7 @@
                 <span class="header__nav-burger"></span>
             </button>
 
-            <!-- class: no--js, menu is open
-            class: header__nav--opened, opens menu using JS
-            class: header__nav--closed, closes menu using JS
-            class: header__nav-burger--closed, toggles the burger button using JS -->
-
-            <nav class="header__nav nav no--js">
+            <nav class="header__nav nav ">
 
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -125,7 +124,7 @@
                                     <td class="example__in-numbers">5 кг</td>
                                     <td class="example__in-words">снижение веса</td>
                                 </tr>
-                                <tr class="example__table">
+                                <tr class="example__table example__table--space">
                                     <td class="example__in-numbers">60 дней</td>
                                     <td class="example__in-words">затрачено времени</td>
                                 </tr>
@@ -183,7 +182,7 @@
 
           </div>
           <div class="footer__map" id="map">
-              <img src="./img/footer/map/mobile/bg-map-mobile@1x.png" alt="Мы на карте" height="360" class="footer__map-img">
+
           </div>
 
           <div class="footer__links wrapper">
