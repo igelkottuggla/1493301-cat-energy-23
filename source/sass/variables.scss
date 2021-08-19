@@ -6,6 +6,7 @@ $basic-light-grey: #f2f2f2;
 $basic-light-grey-2: #ebebeb;
 $basic-dark-grey: #eaeaea;
 $grey: #c4c4c4;
+$deep-grey: #dcdcdc;
 $special-grey: #cdcdcd;
 $special-light-grey: #d3d3d3;
 $special-dark-grey: #666666;
@@ -17,25 +18,40 @@ $status_error: #ff8282;
 $white: #ffffff;
 $black: #000000;
 $light-black: #111111;
+$partial-opacity-white: rgba(255, 255, 255, 0.3);
 
 /* Text colors */
 $black-text: $black;
 $light-text: $white;
-$button-color: $basic-green;
-$nav-link-decor: $grey-line-2;
 $grey-text: $special-dark-grey-2;
 $dark-grey-text: $special-dark-grey-3;
 $currentColor: inherit;
 
 /* BG colors */
 $primary-bg-color: $white;
+$nav-link-decor-tablet: $basic-green;
+$green-bg-color: $basic-green;
 $primary-grey-bg: $basic-light-grey;
 $secondary-grey-bg: $basic-dark-grey;
+$button-color: $basic-green;
+$btn-hover-color: $basic-green-2;
+$primary-green-bg: $basic-green;
+$green-color-links: $basic-green;
 
 /* Elements' colors */
+$black-border: $black;
 $border-color: $special-grey;
 $light-border: $basic-light-grey-2;
+$grey-border: $grey-line-2;
 $fill-grey-icons: $special-dark-grey;
+$nav-burger-color: $light-black;
+$nav-desktop-index-decor: $white;
+$nav-link-decor: $grey-line-2;
+$categories-decor-bg: $basic-green-2;
+$promo-bg: $basic-green-2;
+$categories-paragrah-decor-border: $grey-line;
+$slider-bar-bg: $deep-grey;
+$slider-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
 
 /* Font weight */
 $font-weight-normal: 400;
@@ -49,14 +65,20 @@ $plain-text-tablet-lh: 20px;
 $btn-tablet-fs: 20px;
 
 $footer-contacts-tablet-fs: 20px;
-$footer-contacts-tablet-lh: 21px;
+$footer-contacts-tablet-lh: 25px;
 $footer-adress-tablet-lh: 20px;
 $footer-dev-link-lh: 19px;
 
 $nav-desltop-lh: 30px;
+$nav-desktop-fs: 20px;
 $categoris-tablet-lh: 37px;
 $example-table-lh: 12px;
+$example-words-table-tablet-lh: 14px;
+$example-table-fs: 14px;
+$example-table-tablet-fs: 30px;
+$example-table-tablet-lh: 37px;
 $example-result-lh: 20px;
+$example-result-fs: 20px;
 $card-table-tablet-fs: 16px;
 $catalog-subtitle-tablet-fs: 20px;
 $catalog-subtitle-tablet-lh: 20px;

@@ -1,21 +1,49 @@
 .example {
+  margin-top: 42px;
+  padding-bottom: 33px;
   background-color: $secondary-grey-bg;
 
   @include media-tablet {
+    padding-bottom: 0;
     background: linear-gradient(
       180deg,
       $primary-bg-color 0%,
-      $primary-bg-color 40%,
-      $primary-grey-bg 40%
+      $primary-bg-color 53%,
+      #f2f2f2 53%
     );
+  }
+
+  @include media-desktop {
+    margin-top: 20px;
+    min-height: 600px;
+    background: linear-gradient(
+        to bottom,
+        $primary-bg-color 138px,
+        transparent 130px
+      ),
+      linear-gradient(to right, $primary-grey-bg 73%, $secondary-grey-bg 40%);
+  }
+}
+
+.example__wrapper {
+  padding-top: 24px;
+
+  @include media-tablet {
+    padding-top: 0;
   }
 }
 
 .example__list {
+  margin-top: 25px;
   text-align: center;
 
   @include media-tablet {
+    margin-top: 54px;
     width: 100%;
+  }
+
+  @include media-desktop {
+    margin-top: 45px;
   }
 }
 
@@ -31,16 +59,22 @@
   @include media-desktop {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
 }
 
 .example__main-title {
   @include secondary-titles-fs36-lh40;
+  margin-bottom: 33px;
 
   @include media-tablet {
     @include title-fs60-lh60;
+    margin-bottom: 63px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 146px;
   }
 }
 
@@ -50,6 +84,7 @@
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
+    padding-right: 25px;
     line-height: $basic-text-tablet-lh;
   }
 }
@@ -63,7 +98,7 @@
 
 .example__table {
   position: relative;
-  padding: 8px 24px;
+  padding: 12px 17px 12px;
   width: 124px;
   border: 1px solid $border-color;
   border-radius: 3px;
@@ -73,20 +108,49 @@
   }
 }
 
+.example__table--space {
+  margin-left: auto;
+
+  @include media-tablet {
+    margin-left: 42px;
+  }
+}
+
 .example__in-numbers {
   @include secondary-subtitles-fs24-lh24;
+  display: block;
+  margin-bottom: 5px;
   text-transform: uppercase;
+
+  @include media-tablet {
+    margin-bottom: 8px;
+    font-size: $example-table-tablet-fs;
+    line-height: $example-table-tablet-lh;
+  }
+
+  @include media-desktop {
+    margin-bottom: 6px;
+  }
 }
 
 .example__in-words {
   @include tables-basic-font-fs12;
-  line-height: $example-table-lh;
   position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translate(-50%, 50%);
+  width: 84px;
+  line-height: $example-table-lh;
   color: $grey-text;
   background-color: $secondary-grey-bg;
 
   @include media-tablet {
+    bottom: 0;
+    font-size: $example-table-fs;
+    line-height: $example-words-table-tablet-lh;
     background-color: $primary-bg-color;
+    width: 130px;
+    margin: 0 auto;
   }
 
   @include media-desktop {
@@ -99,26 +163,51 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
+  margin-top: 32px;
 
   @include media-tablet {
-    justify-content: flex-end;
+    flex-direction: column;
+    text-align: right;
+    max-width: 250px;
+    margin-top: 0;
+    margin-left: auto;
   }
 
   @include media-desktop {
+    flex-direction: row;
     justify-content: flex-start;
+    margin-top: 59px;
+    margin-left: 0;
+    text-align: left;
+    max-width: 100%;
   }
 }
 
 .example__result-cost {
   @include tables-basic-font-fs12;
+  font-size: $example-table-fs;
   font-family: $main-font;
   line-height: $example-result-lh;
   text-transform: uppercase;
+
+  @include media-tablet {
+    font-size: $example-result-fs;
+    width: 100%;
+  }
 }
 
 .example__result-title {
   @include tables-basic-font-fs12;
+  font-size: $example-table-fs;
+
+  order: -1;
   font-family: $main-font;
   line-height: $example-result-lh;
   text-transform: uppercase;
+
+  @include media-tablet {
+    margin-bottom: 9px;
+    font-size: $example-result-fs;
+    width: 100%;
+  }
 }

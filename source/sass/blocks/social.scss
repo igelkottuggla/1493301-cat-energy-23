@@ -1,18 +1,42 @@
-.social__svg {
-  fill: $fill-grey-icons;
+.social__link {
+  color: $grey-text;
+}
+
+.social__link:hover {
+  color: $green-color-links;
+}
+
+.social__link:active {
+  color: $green-color-links;
+  opacity: 0.3;
 }
 
 .social__link--vk .social__svg {
   width: 23px;
   height: 16px;
+
+  @include media-tablet {
+    width: 29px;
+    height: 17px;
+  }
 }
 
 .social__link--inst .social__svg {
   width: 16px;
   height: 16px;
+
+  @include media-tablet {
+    width: 23px;
+    height: 23px;
+  }
 }
 
 .social__link--fb .social__svg {
   width: 22px;
   height: 19px;
+
+  @include media-tablet {
+    width: 13px;
+    height: 27px;
+  }
 }

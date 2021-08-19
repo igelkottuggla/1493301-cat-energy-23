@@ -47,7 +47,7 @@
   font-style: $fontStyle;
 }
 
-@mixin order-text-fs20-lh30 {
+@mixin text-fs20-lh30 {
   @include font($main-font, 20px, 30px, $font-weight-normal, normal);
 }
 

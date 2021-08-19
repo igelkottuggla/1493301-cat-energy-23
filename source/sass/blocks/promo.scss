@@ -4,16 +4,27 @@
   min-height: 460px;
   text-align: center;
   background-image: url("../img/promo/mobile/index-background-mobile@1x.jpg"),
-    linear-gradient(to top, $white 150px, $basic-green 150px);
-  background-size: contain;
-  background-position: top center;
-  background-repeat: no-repeat;
+    linear-gradient(to top, $white 0, $promo-bg 0);
+  background-size: 280px 302px, 100% 302px;
+  background-position: top center, top center;
+  background-repeat: no-repeat, no-repeat;
 
   @include media-tablet {
-    min-height: 870px;
+    min-height: 843px;
     text-align: left;
     background-image: none;
     background-color: transparent;
+  }
+
+  .promo__info {
+    @include media-tablet {
+      padding: 30px 70px 30px 85px;
+    }
+
+    @include media-desktop {
+      padding-top: 75px;
+      padding-right: 80px;
+    }
   }
 
   @include media-desktop {
@@ -52,31 +63,52 @@
 
 .promo__desc {
   @include plain-text-fs14;
+  margin-top: 25px;
   line-height: $plain-test-lh;
   font-family: $main-font;
   color: $light-text;
   text-transform: uppercase;
 
   @include media-tablet {
+    margin-top: 39px;
+    font-size: $plain-text-tablet-lh;
     line-height: $plain-text-tablet-lh;
     color: $black-text;
   }
 }
 
 .promo__pic {
+  margin-top: 29px;
+
   @include media-tablet {
-    width: 709px;
+    position: absolute;
+    width: 629px;
     height: 609px;
+    z-index: -1;
+    top: 223px;
+    right: 29px;
   }
 
   @include media-desktop {
     position: absolute;
-    top: 0;
+    top: -3px;
     left: 50%;
-    transform: translateX(-30%);
+    transform: translateX(-25%);
+    width: 520px;
+    height: 499px;
   }
 }
 
 .promo__link {
+  margin-top: 5px;
   text-decoration: none;
+
+  @include media-tablet {
+    margin-top: 49px;
+    width: 244px;
+  }
+
+  @include media-desktop {
+    margin-top: 52px;
+  }
 }

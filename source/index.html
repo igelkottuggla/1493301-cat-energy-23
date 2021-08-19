@@ -3,12 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <link type="text/css" rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Cat energy</title>
 </head>
 
 <body>
-    <header class="header header--index">
+    <!-- class: header--no-js, menu is open, button is hidden
+      class: header--opened, toggles menu using JS, toggles nav-burger -->
+
+    <header class="header header--index header--no-js">
         <div class="header__wrapper wrapper">
             <a class="header__logo-pic-link">
                 <picture>
@@ -19,7 +23,7 @@
                 <span class="header__nav-burger"></span>
             </button>
 
-            <nav class="header__nav nav">
+            <nav class="header__nav nav ">
 
                 <ul class="nav__list">
                     <li class="nav__item">
@@ -120,7 +124,7 @@
                                     <td class="example__in-numbers">5 кг</td>
                                     <td class="example__in-words">снижение веса</td>
                                 </tr>
-                                <tr class="example__table">
+                                <tr class="example__table example__table--space">
                                     <td class="example__in-numbers">60 дней</td>
                                     <td class="example__in-words">затрачено времени</td>
                                 </tr>
@@ -141,7 +145,7 @@
                                     <img src="./img/models/mobile/before-mobile@1x.png" class="models__img" alt="Cat before dieat">
                                 </picture>
                             </div>
-                            <div class="models__after visually-hidden">
+                            <div class="models__after">
                                 <picture>
                                     <img src="./img/models/mobile/after-mobile@1x.png" class="models__img" alt="Cat after diet">
                                 </picture>
@@ -173,18 +177,18 @@
           <div class="footer__contacts footer__contacts--index">
             <div class="wrapper">
                 <h2 class="footer__contacts-title">Приглашаем к сотрудничеству дилеров!</h2>
-                <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span> </p>
+                <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span class="footer__contacts-city">Санкт-Петербург</span> </p>
             </div>
 
           </div>
           <div class="footer__map" id="map">
-              <img src="./img/footer/map/mobile/bg-map-mobile@1x.png" alt="Мы на карте" height="360" class="footer__map-img">
+
           </div>
 
           <div class="footer__links wrapper">
               <div class="footer__block footer__block--logo">
                   <a class="footer__logo footer__logo--footer">
-                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo">
+                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo" class="footer__logo-img">
                   </a>
               </div>
 
@@ -239,5 +243,6 @@
               </div>
           </div>
     </footer>
+    <script src="js/menu-toggle.js"></script>
 </body>
 </html>

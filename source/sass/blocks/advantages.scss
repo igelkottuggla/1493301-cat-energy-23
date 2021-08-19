@@ -1,5 +1,21 @@
+.advantages {
+  margin-top: 7px;
+
+  @include media-tablet {
+    margin-top: 15px;
+    padding-bottom: 52px;
+    border-bottom: 1px solid $grey-border;
+  }
+
+  @include media-desktop {
+    margin-top: 45px;
+    border-bottom: none;
+  }
+}
+
 .advantages__main-title {
   @include secondary-titles-fs36-lh40;
+  margin-bottom: 38px;
 
   @include media-tablet {
     @include title-fs60-lh60;
@@ -9,32 +25,102 @@
 .advantages__list {
   @include media-tablet {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 154px;
-    row-gap: 37px;
+    grid-template-columns: repeat(2, 250px);
+    column-gap: 143px;
+    row-gap: 48px;
+    counter-reset: list;
   }
 
   @include media-desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 94px;
+    column-gap: 85px;
   }
 }
 
 .advantages__item {
   @include plain-text-fs14;
-  margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 19px;
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
+    margin-left: 0;
     line-height: $basic-text-tablet-lh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    min-height: 280px;
+    min-height: 250px;
+    width: 100%;
+
+    &::after {
+      position: absolute;
+      counter-increment: list;
+      content: counter(list);
+      font-size: 281px;
+      color: $primary-grey-bg;
+      font-family: $main-font;
+      bottom: 105px;
+      right: 10px;
+      z-index: -1;
+    }
+  }
+
+  @include media-desktop {
+    &::after {
+      right: 0;
+    }
   }
 }
 
+.advantages__item:nth-of-type(even) {
+  @include media-tablet {
+    margin-right: 78px;
+  }
+}
+
+.advantages__item::before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  left: 0;
+  background-color: $green-bg-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px 32px;
+
+  @include media-tablet {
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: 35px;
+  }
+}
+
+.advantages__item--leaf::before {
+  background-image: url("../img/advantages/advantage-leaf.svg");
+}
+
+.advantages__item--powder::before {
+  background-image: url("../img/advantages/advantage-powder.svg");
+}
+
+.advantages__item--meals::before {
+  background-image: url("../img/advantages/advantage-dining.svg");
+}
+
+.advantages__item--time::before {
+  background-image: url("../img/advantages/advantage-clock.svg");
+}
+
 .advantages__list-description {
+  padding-left: 80px;
   color: $grey-text;
+  padding-bottom: 7px;
+
+  @include media-tablet {
+    padding-left: 0;
+    padding-bottom: 30px;
+  }
 }
