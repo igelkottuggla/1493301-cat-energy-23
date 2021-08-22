@@ -1,3 +1,17 @@
+.add-more {
+  position: relative;
+  margin-top: 25px;
+
+  @include media-tablet {
+    margin-top: 65px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 86px;
+    margin-top: 74px;
+  }
+}
+
 .add-more__block {
   display: flex;
   flex-direction: column;
@@ -7,13 +21,12 @@
   width: 100%;
 
   @include media-tablet {
-    margin-top: 68px;
+    margin-top: 75px;
   }
 
   @include media-desktop {
     @include media-desktop {
       display: grid;
-      grid-template-areas: "heading heading" "goods add-more";
       grid-template-columns: 1fr 245px;
       grid-column-gap: 79px;
     }
@@ -22,19 +35,64 @@
 
 .add-more__heading {
   @include secondary-subtitles-fs24-lh24;
+  display: flex;
   width: 100%;
+  margin: 0 0 34px;
+  padding-left: 20px;
+
+  @include media-tablet {
+    @include title-fs36-lh36;
+    padding-left: 70px;
+    margin-bottom: 80px;
+  }
 
   @include media-desktop {
-    grid-area: heading;
+    padding-left: 110px;
+  }
+}
+
+.add-more__heading::after {
+  content: "";
+  flex-grow: 1;
+  min-width: 20px;
+  height: 2px;
+  margin-left: 22px;
+  margin-top: 14px;
+  background-color: $green-bg-color;
+
+  @include media-tablet {
+    width: 30px;
+    margin-top: 21px;
+    left: 0;
+    border-bottom: 3px solid $green-bg-color;
+    top: 15px;
+  }
+
+  @include media-desktop {
+    width: 70px;
+  }
+}
+
+.add-more__heading::before {
+  @include media-tablet {
+    content: "";
+    min-width: 30px;
+    height: 3px;
+    margin-left: -70px;
+    margin-right: 40px;
+    margin-top: 22px;
+    background-color: $green-bg-color;
+  }
+
+  @include media-desktop {
+    min-width: 70px;
+    margin-left: -110px;
+    margin-right: 40px;
   }
 }
 
 .add-more__goods {
   width: 100%;
-
-  @include media-desktop {
-    grid-area: goods;
-  }
 }
 
 .add-more__list {
@@ -42,17 +100,43 @@
 }
 
 .add-more__item {
+  padding: 13px 0 18px;
   border-bottom: 1px solid $border-color;
+
+  @include media-tablet {
+    padding: 26px 38px;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+  }
+
+  @include media-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.add-more__item:first-child {
+  border-top: 1px solid $border-color;
 }
 
 .add-more__title {
-  @include small-titles-fs16();
+  @include small-titles-fs16;
   color: $dark-grey-text;
   text-transform: uppercase;
+  margin-bottom: 13px;
 
   @include media-tablet {
+    margin-bottom: 25px;
     font-size: $catalog-subtitle-tablet-fs;
     line-height: $catalog-subtitle-tablet-lh;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
   }
 }
 
@@ -62,19 +146,59 @@
     justify-content: flex-start;
     align-items: center;
   }
+
+  @include media-desktop {
+    width: calc(100% - 244px);
+  }
 }
 
 .add-more__amount {
   @include plain-text-fs14;
   line-height: $add-more-amount-lh;
   color: $grey-text;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
 
   @include media-tablet {
     @include basic-text-fs16-lh20;
     margin-left: auto;
   }
+
+  @include media-desktop {
+    justify-content: flex-start;
+    width: 290px;
+    margin-bottom: 0;
+    margin-right: 38px;
+    margin-left: auto;
+  }
 }
 
 .add-more__price {
+  display: inline-block;
+  margin-left: auto;
   text-transform: uppercase;
+
+  @include media-tablet {
+    margin-left: 51px;
+  }
+
+  @include media-desktop {
+    margin-left: auto;
+  }
+}
+
+.add-more__button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include media-tablet {
+    padding-top: 11px;
+  }
+
+  @include media-desktop {
+    margin-left: auto;
+    width: 244px;
+  }
 }
