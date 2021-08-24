@@ -20,10 +20,6 @@ body {
   overflow-x: hidden;
 }
 
-main {
-  overflow: hidden;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -49,6 +45,10 @@ input {
 
 svg {
   fill: currentColor;
+}
+
+.container {
+  overflow: hidden;
 }
 
 .visually-hidden {
