@@ -37,10 +37,12 @@
   font-family: $main-font;
   text-transform: uppercase;
   margin-bottom: 39px;
+  padding-right: 30px;
 
   @include media-tablet {
     @include text-fs20-lh30;
     margin-bottom: 66px;
+    padding-right: 0;
     max-width: 323px;
   }
 }
@@ -185,8 +187,6 @@
   @include big-text-fs24;
   margin: 0 0 35px;
   position: relative;
-  background-color: $primary-bg-color;
-  width: 50%;
 
   @include media-tablet {
     @include title-fs36-lh36;
@@ -203,41 +203,36 @@
   @include media-tablet {
     position: absolute;
     content: "";
-    right: 100%;
     width: 100vw;
     height: 3px;
-    top: 70%;
+    right: 115%;
+    top: 25px;
     background-color: $green-bg-color;
-    margin-right: 37px;
     transform: translateY(-50%);
   }
 
   @include media-desktop {
-    width: calc(100vw - 110px);
+    right: 107%;
   }
 }
 
 .order__fildset-title::after {
-  content: "";
   position: absolute;
-  top: 65%;
-  width: calc(100vw - 170px);
-  height: 3px;
+  content: "";
+  width: 100vw;
+  height: 2px;
+  top: 15px;
+  left: 115%;
   background-color: $green-bg-color;
-  z-index: -1;
-  left: 148px;
   transform: translateY(-50%);
 
   @include media-tablet {
-    margin-left: 44px;
-    margin-right: -50px;
-    width: calc(100vw - 270px);
+    top: 25px;
+    left: 90%;
   }
 
   @include media-desktop {
-    width: calc(100vw - 220px);
-    left: 0;
-    margin-left: 110px;
+    left: 100%;
   }
 }
 
@@ -257,7 +252,6 @@
 .order__details {
   padding-bottom: 12px;
   width: 100%;
-  border-bottom: 1px solid $border-color;
 
   @include media-tablet {
     border-bottom: none;
@@ -265,9 +259,9 @@
 }
 
 .order__aim {
-  padding-top: 28px;
+  position: relative;
+  padding-top: 27px;
   width: 100%;
-  border-bottom: 1px solid $border-color;
 
   @include media-tablet {
     margin-top: 44px;
@@ -281,6 +275,33 @@
     margin: 0;
     align-self: start;
     border: 1px solid $grey-border;
+  }
+}
+
+.order__aim::before {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: $border-color;
+  transform: translateX(0);
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.order__aim::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  width: 100vw;
+  background-color: $border-color;
+
+  @include media-tablet {
+    display: none;
   }
 }
 
@@ -300,7 +321,7 @@
   margin-bottom: 10px;
 
   @include media-tablet {
-    margin-top: 75px;
+    margin-top: 77px;
   }
 
   @include media-desktop {
@@ -325,10 +346,14 @@
 }
 
 .order__owner-data .order__fildset-title::after {
-  top: 30%;
+  left: 95%;
 
   @include media-tablet {
-    top: 70%;
+    left: 98%;
+  }
+
+  @include media-desktop {
+    left: 90%;
   }
 }
 
@@ -407,50 +432,50 @@
     grid-template-columns: repeat(4, 1fr);
     column-gap: 69px;
   }
+}
 
-  .order__extra-item {
-    margin-bottom: 21px;
-    padding-left: 46px;
+.order__extra-item {
+  margin-bottom: 21px;
+  padding-left: 46px;
 
-    @include media-tablet {
-      margin-bottom: 40px;
-      padding-left: 60px;
-    }
+  @include media-tablet {
+    margin-bottom: 40px;
+    padding-left: 60px;
   }
+}
 
-  .order__extra-item .order__label {
-    position: relative;
-    color: $black-text;
+.order__extra-item .order__label {
+  position: relative;
+  color: $black-text;
+}
+
+.order__extra-item .order__label::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-color;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @include media-tablet {
+    width: 40px;
+    height: 40px;
+    left: -60px;
   }
+}
 
-  .order__extra-item .order__label::before {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 30px;
-    border: 1px solid $border-color;
-    left: -45px;
-    top: 50%;
-    transform: translateY(-50%);
+.order__extra-item .order__label:hover::before {
+  border: 1px solid $label-hover-color;
+}
 
-    @include media-tablet {
-      width: 40px;
-      height: 40px;
-      left: -60px;
-    }
-  }
-
-  .order__extra-item .order__label:hover::before {
-    border: 1px solid $label-hover-color;
-  }
-
-  .order__owner-fields {
-    @include media-desktop {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 78px;
-      align-items: center;
-    }
+.order__owner-fields {
+  @include media-desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 78px;
+    align-items: center;
   }
 }
 

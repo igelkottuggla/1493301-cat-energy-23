@@ -13,9 +13,13 @@
       display: none;
     }
   }
+
+  @include media-tablet {
+    min-height: 515px;
+  }
 }
 
-.card:not(:last-child) {
+.card:not(.card--add-more) {
   @include media-tablet {
     background-image: linear-gradient(
       to bottom,
@@ -66,12 +70,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  margin-bottom: 15px;
 
   @include media-tablet {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
     width: calc(100% - 76px);
   }
 }
@@ -81,27 +87,50 @@
   height: 100%;
 
   @include media-tablet {
-    margin-bottom: 33px;
+    margin-bottom: 37px;
+  }
+
+  @include media-tablet {
+    margin-bottom: 32px;
   }
 }
 
 .card__pic-link {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  margin-top: 30px;
 
   @include media-tablet {
     justify-content: flex-end;
+    margin-top: 0;
+    margin-bottom: 35px;
   }
 }
 
 .card__img {
-  width: 140px;
-  height: auto;
-
   @include media-tablet {
     width: 168px;
     height: 206px;
+  }
+}
+
+.card__img--small {
+  @include media-tablet {
+    width: 135px;
+    height: auto;
+  }
+
+  @include media-desktop {
+    width: 147px;
+    height: auto;
+  }
+}
+
+.card:first-child .card__img--small {
+  @include media-desktop {
+    width: 135px;
+    height: auto;
   }
 }
 
@@ -113,8 +142,7 @@
   padding-right: 66px;
 
   @include media-tablet {
-    margin: 45px auto 21px;
-
+    margin: 0 auto 21px;
     padding-right: 0;
     max-width: 157px;
   }
@@ -128,6 +156,7 @@
 
   @include media-tablet {
     font-size: $catalog-subtitle-tablet-fs;
+    line-height: $catalog-subtitle-tablet-lh;
     text-align: center;
   }
 }
@@ -138,7 +167,7 @@
   text-align: center;
 
   @include media-tablet {
-    margin-top: 161px;
+    margin-top: 155px;
     margin-bottom: 29px;
     max-width: 134px;
   }

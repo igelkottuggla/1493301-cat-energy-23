@@ -8,7 +8,7 @@
 
   @include media-desktop {
     margin-bottom: 86px;
-    margin-top: 74px;
+    margin-top: 77px;
   }
 }
 
@@ -19,10 +19,6 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-
-  @include media-tablet {
-    margin-top: 75px;
-  }
 
   @include media-desktop {
     @include media-desktop {
@@ -35,59 +31,54 @@
 
 .add-more__heading {
   @include secondary-subtitles-fs24-lh24;
-  display: flex;
-  width: 100%;
+  position: relative;
   margin: 0 0 34px;
-  padding-left: 20px;
 
   @include media-tablet {
     @include title-fs36-lh36;
-    padding-left: 70px;
-    margin-bottom: 80px;
+    padding-left: 35px;
+    margin-bottom: 82px;
   }
 
   @include media-desktop {
-    padding-left: 110px;
+    padding-left: 0;
   }
 }
 
 .add-more__heading::after {
+  position: absolute;
   content: "";
-  flex-grow: 1;
-  min-width: 20px;
+  width: 100vw;
   height: 2px;
-  margin-left: 22px;
-  margin-top: 14px;
+  top: 15px;
+  left: 90%;
   background-color: $green-bg-color;
+  transform: translateY(-50%);
 
   @include media-tablet {
-    width: 30px;
-    margin-top: 21px;
-    left: 0;
-    border-bottom: 3px solid $green-bg-color;
-    top: 15px;
+    top: 25px;
+    left: 60%;
   }
 
   @include media-desktop {
-    width: 70px;
+    left: 30%;
   }
 }
 
 .add-more__heading::before {
   @include media-tablet {
+    position: absolute;
     content: "";
-    min-width: 30px;
+    width: 100vw;
     height: 3px;
-    margin-left: -70px;
-    margin-right: 40px;
-    margin-top: 22px;
+    right: 100%;
+    top: 25px;
     background-color: $green-bg-color;
+    transform: translateY(-50%);
   }
 
   @include media-desktop {
-    min-width: 70px;
-    margin-left: -110px;
-    margin-right: 40px;
+    right: 103%;
   }
 }
 
@@ -104,7 +95,7 @@
   border-bottom: 1px solid $border-color;
 
   @include media-tablet {
-    padding: 26px 38px;
+    padding: 24px 38px 25px;
     border-left: 1px solid $border-color;
     border-right: 1px solid $border-color;
   }
@@ -130,7 +121,7 @@
   margin-bottom: 13px;
 
   @include media-tablet {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     font-size: $catalog-subtitle-tablet-fs;
     line-height: $catalog-subtitle-tablet-lh;
   }
@@ -168,7 +159,7 @@
 
   @include media-desktop {
     justify-content: flex-start;
-    width: 290px;
+    min-width: 290px;
     margin-bottom: 0;
     margin-right: 38px;
     margin-left: auto;
