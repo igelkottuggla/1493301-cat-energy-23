@@ -1,5 +1,6 @@
 .bonus {
   @include basic-text-fs16-lh20;
+  position: relative;
   color: $light-text;
   min-height: 290px;
   background: $basic-green;
@@ -7,9 +8,56 @@
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 35px;
+  margin-bottom: 33px;
+  padding: 10px 61px 43px 58px;
 
   @include media-tablet {
+    flex-direction: row;
+    padding: 0;
+    margin-top: 67px;
+    margin-bottom: 74px;
+    padding-right: 124px;
     width: 100%;
+    min-height: 200px;
+    background-size: cover;
+  }
+
+  @include media-desktop {
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px 43px 42px 41px;
+    min-height: 289px;
+  }
+}
+
+.bonus::before {
+  position: absolute;
+  content: "";
+  background-image: url("../img/svg/icon-gift.svg");
+  width: 78px;
+  height: 80px;
+  background-repeat: no-repeat;
+  top: 59px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include media-tablet {
+    top: 50%;
+    left: 80px;
+    transform: translate(0, -50%);
+  }
+
+  @include media-desktop {
+    top: 56px;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 }
 
@@ -21,4 +69,13 @@
 .bonus__text {
   @include basic-text-fs16-lh20;
   color: $light-text;
+
+  @include media-tablet {
+    max-width: 161px;
+    text-align: left;
+  }
+
+  @include media-desktop {
+    text-align: center;
+  }
 }

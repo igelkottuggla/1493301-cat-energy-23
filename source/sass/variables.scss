@@ -6,6 +6,7 @@ $basic-light-grey: #f2f2f2;
 $basic-light-grey-2: #ebebeb;
 $basic-dark-grey: #eaeaea;
 $grey: #c4c4c4;
+$average-grey: #bababa;
 $deep-grey: #dcdcdc;
 $special-grey: #cdcdcd;
 $special-light-grey: #d3d3d3;
@@ -39,9 +40,14 @@ $primary-green-bg: $basic-green;
 $green-color-links: $basic-green;
 
 /* Elements' colors */
+$input-hover-coor: $basic-green;
+$dark-border: $special-dark-grey-2;
+$error-color-element: $status_error;
+$label-hover-color: $average-grey;
 $black-border: $black;
 $border-color: $special-grey;
 $light-border: $basic-light-grey-2;
+$show-more-btn-hover: $basic-light-grey-2;
 $grey-border: $grey-line-2;
 $fill-grey-icons: $special-dark-grey;
 $nav-burger-color: $light-black;
@@ -80,12 +86,16 @@ $example-table-tablet-lh: 37px;
 $example-result-lh: 20px;
 $example-result-fs: 20px;
 $card-table-tablet-fs: 16px;
+$card-btn-tablet-fs: 16px;
+$moregoods-tablet-fs: 16px;
+$moregoods-tablet-lh: 18px;
 $catalog-subtitle-tablet-fs: 20px;
-$catalog-subtitle-tablet-lh: 20px;
+$catalog-subtitle-tablet-lh: 24px;
 $add-more-amount-lh: 14px;
 $order-input-lh: 18px;
 $order-btn-lh: 18px;
 $order-footnote-lh: 16px;
+$order-footnote-fs: 16px;
 $order-label-lh: 18px;
 
 /*Fonts*/

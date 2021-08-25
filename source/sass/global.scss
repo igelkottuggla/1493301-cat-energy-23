@@ -47,6 +47,10 @@ svg {
   fill: currentColor;
 }
 
+.container {
+  overflow: hidden;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

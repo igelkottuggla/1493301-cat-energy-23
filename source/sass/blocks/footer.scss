@@ -13,10 +13,10 @@
   align-items: center;
   padding-top: 30px;
   padding-bottom: 25px;
-  background-color: $primary-bg-color;
 
   @include media-tablet {
     padding: 66px 71px 56px;
+    background-color: $primary-grey-bg;
   }
 
   @include media-desktop {
@@ -24,6 +24,8 @@
     top: 95px;
     left: 110px;
     width: 570px;
+    padding: 62px 71px 60px;
+    background-color: $primary-bg-color;
   }
 }
 
@@ -40,6 +42,10 @@
     font-size: $footer-contacts-tablet-fs;
     line-height: $footer-contacts-tablet-lh;
     width: 30%;
+  }
+
+  @include media-desktop {
+    width: 40%;
   }
 }
 
@@ -61,12 +67,17 @@
     text-align: right;
     width: 30%;
   }
+
+  @include media-desktop {
+    width: 40%;
+    text-align: left;
+  }
 }
 
 .footer__map {
   height: 360px;
   width: 100%;
-  background-image: url("../../img/footer/map/mobile/bg-map-mobile@1x.png");
+  background-image: url("../img/footer/map/mobile/bg-map-mobile@1x.png");
   background-position: center center;
   background-size: cover;
 

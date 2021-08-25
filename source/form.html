@@ -8,9 +8,12 @@
 </head>
 
 <body>
-    <header class="header header--index">
+    <!-- class: header--no-js, menu is open, button is hidden
+      class: header--opened, toggles menu using JS, toggles nav-burger -->
+
+    <header class="header header--index header--no-js">
         <div class="header__wrapper wrapper">
-            <a class="header__logo-pic-link">
+            <a class="header__logo-pic-link" href="index.html">
                 <picture>
                     <img class="header__logo" src="./img/svg/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
                 </picture>
@@ -19,24 +22,25 @@
                 <span class="header__nav-burger"></span>
             </button>
 
-            <nav class="header__nav nav">
+            <nav class="header__nav nav ">
+
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a class="nav__link nav__link--active" href="index.html">Главная</a>
+                        <a class="nav__link" href="index.html">Главная</a>
                     </li>
                     <li class="nav__item">
                         <a class="nav__link" href="catalog.html">Каталог продукции</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link">Подбор программы</a>
+                        <a class="nav__link nav__link--active">Подбор программы</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <section class="order wrapper">
+    <main class="container">
+        <section class="order order__wrapper wrapper">
             <h1 class="order__main-title main-title">Подбор программы</h1>
             <p class="order__desc">
             Заполните анкету, и мы подберем программу питания для вашего кота
@@ -92,15 +96,30 @@
                         <legend class="order__fildset-title">
                         Контактные данные (владельца кота)
                         </legend>
-                        <div class="order__field-wrapper">
-                            <label for="email" class="order__label">E-mail:*</label>
-                            <input class="order__input" id="email" type="email" name="eыmail"
-                            placeholder="kuklachev@gmail.com" required />
-                        </div>
-                        <div class="order__field-wrapper">
-                            <label for="tel" class="order__label">Телефон:*</label>
-                            <input class="order__input" id="tel" type="tel" name="tel-number" placeholder="8 (960) 900-60-90" required pattern="[0-9]{11}"/>
-                        </div>
+
+                        <div class="order__owner-fields">
+                            <div class="order__field-wrapper">
+                                <label for="email" class="order__label">E-mail:*</label>
+                                <input class="order__input" id="email" type="email" name="email"
+                                placeholder="kuklachev@gmail.com" required />
+                                <svg class="order__input-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 17 13" style="enable-background: new 0 0 17 13;" xml:space="preserve">
+                                    <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+                                </svg>
+                              </div>
+                              <div class="order__field-wrapper">
+                                  <label for="tel" class="order__label">Телефон:*</label>
+                                  <input class="order__input order__input--tel" id="tel" type="tel" name="tel-number" placeholder="8 (960) 900-60-90" required pattern="[0-9]{11}"/>
+                                      <svg class="order__input-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 20 20" style="enable-background: new 0 0 20 20;" xml:space="preserve">
+                                          <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                                          <path
+                                            d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                                          c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                                          C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                                          C7.8,20,8.1,19.7,8.1,19.4z"/>
+                                    </svg>
+                              </div>
+                      </div>
+
                     </fieldset>
                 </div>
                 <div class="order__comment">
@@ -149,20 +168,21 @@
     </main>
 
     <footer class="footer">
-          <div class="footer__contacts footer__contacts">
+          <div class="footer__contacts">
             <div class="wrapper">
                 <h2 class="footer__contacts-title">Приглашаем к сотрудничеству дилеров!</h2>
-                <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span> </p>
+                <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span class="footer__contacts-city">Санкт-Петербург</span> </p>
             </div>
+
           </div>
           <div class="footer__map" id="map">
-              <img src="./img/footer/map/mobile/bg-map-mobile@1x.png" alt="Мы на карте" height="360" class="footer__map-img">
+
           </div>
 
           <div class="footer__links wrapper">
               <div class="footer__block footer__block--logo">
                   <a class="footer__logo footer__logo--footer">
-                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo">
+                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo" class="footer__logo-img">
                   </a>
               </div>
 
@@ -217,5 +237,7 @@
               </div>
           </div>
     </footer>
+    <script src="js/menu-toggle.js"></script>
+
 </body>
 </html>

@@ -27,6 +27,10 @@
 .button--show-more {
   background-color: $primary-grey-bg;
   color: $grey-text;
+
+  @include media-tablet {
+    font-size: $card-btn-tablet-fs;
+  }
 }
 
 .button--buy {
@@ -34,4 +38,14 @@
   display: block;
   font-family: $main-font;
   color: $light-text;
+}
+
+.button--show-more:hover {
+  background-color: $show-more-btn-hover;
+}
+
+.button--show-more:active {
+  background-color: $show-more-btn-hover;
+  color: $grey-text;
+  opacity: 0.3;
 }
