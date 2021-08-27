@@ -81,8 +81,25 @@
   background-position: center center;
   background-size: cover;
 
+  @media (min-resolution: resolution2x) {
+    background-image: url("../img/footer/map/mobile/bg-map-mobile@2x.png");
+  }
+
   @include media-tablet {
     height: 400px;
+    background-image: url("../img/footer/map/tablet/bg-map-tablet@1x.png");
+
+    @media (min-resolution: resolution2x) {
+      background-image: url("../img/footer/map/tablet/bg-map-tablet@2x.png");
+    }
+  }
+
+  @include media-tablet {
+    background-image: url("../img/footer/map/desktop/bg-map-desktop@1x.png");
+
+    @media (min-resolution: resolution2x) {
+      background-image: url("../img/footer/map/desktop/bg-map-desktop@2x.png");
+    }
   }
 }
 

@@ -3,7 +3,18 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="./img/favicons/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Cat Enenrgy">
+    <meta name="application-name" content="Cat Enenrgy">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="./browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
     <link type="text/css" rel="stylesheet" href="./css/style.css">
     <title>HTML Academy: Cat energy</title>
 </head>
@@ -16,6 +27,8 @@
         <div class="header__wrapper wrapper">
             <a class="header__logo-pic-link">
                 <picture>
+                    <source srcset="./img/svg/logo-desktop.svg" media="(min-width: 1440px)">
+                    <source srcset="./img/svg/logo-tablet.svg" media="(min-width: 768px)">
                     <img class="header__logo" src="./img/svg/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
                 </picture>
             </a>
@@ -48,7 +61,9 @@
                     <h1 class="promo__main-title main-title">Функциональное питание для котов</h1>
                     <p class="promo__desc">Занялся собой? Займись котом!</p>
                     <picture>
-                        <img class="promo__pic" src="./img/promo/mobile/index-can-mobile@1x.png" alt="Корм для кошек Cat Energy с курицей" width="280" height="270">
+                        <source srcset="./img/promo/desktop/index-can-desktop@1x.png 1x, ./img/promo/desktop/index-can-desktop@2x.png 2x" media="(min-width: 1440px)">
+                        <source srcset="./img/promo/tablet/index-can-tablet@1x.jpg 1x, ./img/promo/tablet/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
+                        <img class="promo__pic" src="./img/promo/mobile/index-can-mobile@1x.png" srcset="./img/promo/mobile/index-can-mobile@2x.png 2x" alt="Корм для кошек Cat Energy с курицей" width="280" height="270">
                     </picture>
                     <a class="promo__link button button--activation" href="form.html">Подобрать программу</a>
 
@@ -142,12 +157,16 @@
                         <div class="models__images">
                             <div class="models__before">
                                 <picture>
-                                    <img src="./img/models/mobile/before-mobile@1x.png" class="models__img" alt="Cat before dieat">
+                                    <source srcset="./img/models/desktop/before-desktop@1x.png 1x, ./img/models/desktop/before-desktop@2x.png 2x" media="(min-width: 1440px)">
+                                    <source srcset="./img/models/tablet/before-tablet@1x.png 1x, ./img/models/tablet/before-tablet@2x.png 2x" media="(min-width: 768px)">
+                                    <img src="./img/models/tablet/before-tablet@1x.png" class="models__img"  srcset="./img/models/mobile/before-mobile@2x.png 2x" alt="Cat before dieat">
                                 </picture>
                             </div>
                             <div class="models__after">
                                 <picture>
-                                    <img src="./img/models/mobile/after-mobile@1x.png" class="models__img" alt="Cat after diet">
+                                    <source srcset="./img/models/desktop/after-desktop@1x.png 1x, ./img/models/desktop/after-desktop@2x.png 2x" media="(min-width: 1440px)">
+                                    <source srcset="./img/models/tablet/after-tablet@1x.png 1x, ./img/models/tablet/after-tablet@2x.png 2x" media="(min-width: 768px)">
+                                    <img src="./img/models/mobile/after-mobile@1x.png" srcset="./img/models/mobile/after-mobile@2x.png 2x" class="models__img" alt="Cat after diet">
                                 </picture>
                             </div>
                         </div>

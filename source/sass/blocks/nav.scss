@@ -48,11 +48,11 @@
 
   @include media-tablet {
     @include nav-links-fs18-lh24;
-    padding-top: 12px;
+    padding-top: 23px;
   }
 
   @include media-desktop {
-    padding-top: 15px;
+    padding-top: 18px;
     font-size: $nav-desktop-fs;
     font-weight: $font-weight-bold;
     line-height: $nav-desltop-lh;

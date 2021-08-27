@@ -110,26 +110,16 @@
 
 .card__img {
   @include media-tablet {
-    width: 168px;
+    width: auto;
     height: 206px;
+    max-width: unset;
   }
 }
 
 .card__img--small {
   @include media-tablet {
-    width: 135px;
-    height: auto;
-  }
-
-  @include media-desktop {
-    width: 147px;
-    height: auto;
-  }
-}
-
-.card:first-child .card__img--small {
-  @include media-desktop {
-    width: 135px;
+    max-width: unset;
+    width: auto;
     height: auto;
   }
 }

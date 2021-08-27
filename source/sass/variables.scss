@@ -58,6 +58,7 @@ $promo-bg: $basic-green-2;
 $categories-paragrah-decor-border: $grey-line;
 $slider-bar-bg: $deep-grey;
 $slider-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+$promo-bg: rgba(104, 183, 56, 0.85);
 
 /* Font weight */
 $font-weight-normal: 400;
@@ -107,3 +108,6 @@ $accent-font: "Arial", sans-serif;
 $phones: 320px;
 $tablets: 768px;
 $desktops: 1440px;
+
+/* Retina */
+$resolution2x: 2dppx;
