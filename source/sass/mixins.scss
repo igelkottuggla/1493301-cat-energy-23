@@ -16,6 +16,12 @@
   }
 }
 
+@mixin retina {
+  @media (min-resolution: $resolution2x) {
+    @content;
+  }
+}
+
 @mixin reset-style-link {
   color: $currentColor;
   text-decoration: none;
