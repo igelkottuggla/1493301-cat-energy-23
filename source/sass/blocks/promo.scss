@@ -3,11 +3,16 @@
   padding-top: 27px;
   min-height: 460px;
   text-align: center;
-  background-image: url("../img/promo/mobile/index-background-mobile@1x.jpg"),
-    linear-gradient(to top, $white 0, $promo-bg 0);
-  background-size: 280px 302px, 100% 302px;
+  background-image: linear-gradient(to top, $white 0, $promo-bg 0),
+    url("../img/promo/mobile/index-background-mobile@1x.jpg");
+  background-size: 100% 302px, 320px 302px;
   background-position: top center, top center;
   background-repeat: no-repeat, no-repeat;
+
+  @include retina {
+    background-image: linear-gradient(to top, $white 0, $promo-bg 0),
+      url("../img/promo/mobile/index-background-mobile@2x.jpg");
+  }
 
   @include media-tablet {
     min-height: 843px;
@@ -16,35 +21,44 @@
     background-color: transparent;
   }
 
-  .promo__info {
-    @include media-tablet {
-      padding: 30px 70px 30px 85px;
-    }
-
-    @include media-desktop {
-      padding-top: 75px;
-      padding-right: 80px;
-    }
-  }
-
   @include media-desktop {
     min-height: 650px;
     position: relative;
+  }
+}
 
-    &::before {
-      position: absolute;
-      content: "";
-      min-height: 302px;
-      height: 700px;
-      width: 50%;
-      background: $basic-green;
-      background-image: url("../img/promo/desktop/index-background-desktop@1x.jpg");
-      background-repeat: no-repeat;
-      background-size: 100%;
-      top: -120px;
-      right: 0;
-      z-index: -1;
+.promo::before {
+  display: none;
+
+  @include media-desktop {
+    position: absolute;
+    display: block;
+    content: "";
+    min-height: 302px;
+    height: 695px;
+    width: 50%;
+    background: linear-gradient(to top, $white 0, $promo-bg 0),
+      url("../img/promo/desktop/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    top: -120px;
+    right: 0;
+    z-index: -1;
+
+    @include retina {
+      background-image: linear-gradient(to top, $white 0, $promo-bg 0),
+        url("../img/promo/desktop/index-background-desktop@2x.jpg");
     }
+  }
+}
+
+.promo__info {
+  @include media-tablet {
+    padding: 30px 70px 30px 85px;
+  }
+
+  @include media-desktop {
+    padding: 75px 80px 30px 80px;
   }
 }
 
@@ -75,6 +89,10 @@
     line-height: $plain-text-tablet-lh;
     color: $black-text;
   }
+
+  @include media-desktop {
+    margin-top: 44px;
+  }
 }
 
 .promo__pic {
@@ -91,10 +109,10 @@
 
   @include media-desktop {
     position: absolute;
-    top: -3px;
+    top: -10px;
     left: 50%;
-    transform: translateX(-25%);
-    width: 520px;
+    transform: translateX(-30%);
+    width: 552px;
     height: 499px;
   }
 }

@@ -210,4 +210,8 @@
     font-size: $example-result-fs;
     width: 100%;
   }
+
+  @include media-desktop {
+    margin-bottom: 0;
+  }
 }

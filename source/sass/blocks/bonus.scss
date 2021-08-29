@@ -16,6 +16,10 @@
   margin-bottom: 33px;
   padding: 10px 61px 43px 58px;
 
+  @include retina {
+    background-image: url("../img/bonus/mobile/gift-photo-mobile@2x.jpg");
+  }
+
   @include media-tablet {
     flex-direction: row;
     padding: 0;
@@ -25,6 +29,11 @@
     width: 100%;
     min-height: 200px;
     background-size: cover;
+    background-image: url("../img/bonus/tablet/gift-photo-tablet@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/bonus/tablet/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @include media-desktop {
@@ -34,6 +43,12 @@
     margin-bottom: 0;
     padding: 10px 43px 42px 41px;
     min-height: 289px;
+
+    background-image: url("../img/bonus/desktop/gift-photo-desktop@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/bonus/desktop/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 
