@@ -94,11 +94,11 @@
     }
   }
 
-  @include media-tablet {
+  @include media-desktop {
     background-image: url("../img/footer/map/desktop/bg-map-desktop@1x.png");
 
     @include retina {
-      background-image: url("../img/footer/map/desktop/bg-map-desktop@2x.png");
+      background-image: url("../img/footer/map/desktop/bg-map-desktop@2px.png");
     }
   }
 }
