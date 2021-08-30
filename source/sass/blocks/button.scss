@@ -31,6 +31,10 @@
   @include media-tablet {
     font-size: $card-btn-tablet-fs;
   }
+
+  @include media-desktop {
+    margin-bottom: 38px;
+  }
 }
 
 .button--buy {

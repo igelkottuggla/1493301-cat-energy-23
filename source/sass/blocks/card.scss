@@ -39,6 +39,7 @@
 
   @include media-desktop {
     padding-bottom: 0;
+    justify-content: center;
     margin-top: 81px;
     min-height: 431px;
   }
@@ -161,6 +162,11 @@
     margin-bottom: 29px;
     max-width: 134px;
   }
+
+  @include media-desktop {
+    margin-top: 164px;
+    margin-bottom: 23px;
+  }
 }
 
 .card__table {
@@ -173,7 +179,15 @@
     display: flex;
     padding-top: 6px;
     padding-bottom: 6px;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid $border-color;
+    flex-wrap: wrap;
+    max-width: 250px;
+  }
+
+  @include media-desktop {
+    max-width: 170px;
   }
 }
 
@@ -183,6 +197,7 @@
 
   @include media-tablet {
     font-size: $card-table-tablet-fs;
+    width: 50%;
   }
 }
 
@@ -211,7 +226,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 87px;
+    margin-bottom: 85px;
   }
 }
 

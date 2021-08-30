@@ -13,6 +13,7 @@
   align-items: center;
   padding-top: 30px;
   padding-bottom: 25px;
+  z-index: 1;
 
   @include media-tablet {
     padding: 66px 71px 56px;
@@ -98,7 +99,7 @@
     background-image: url("../img/footer/map/desktop/bg-map-desktop@1x.png");
 
     @include retina {
-      background-image: url("../img/footer/map/desktop/bg-map-desktop@2px.png");
+      background-image: url("../img/footer/map/desktop/bg-map-desktop@2x.png");
     }
   }
 }
