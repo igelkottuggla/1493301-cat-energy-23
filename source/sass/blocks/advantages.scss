@@ -26,8 +26,8 @@
   @include media-tablet {
     display: grid;
     grid-template-columns: repeat(2, 250px);
-    column-gap: 143px;
-    row-gap: 48px;
+    column-gap: 133px;
+    row-gap: 44px;
     counter-reset: list;
   }
 

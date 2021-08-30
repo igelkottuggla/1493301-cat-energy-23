@@ -102,11 +102,11 @@
 
   @include media-tablet {
     position: absolute;
-    width: 629px;
+    width: 703px;
     height: 609px;
     z-index: -1;
-    top: 223px;
-    right: 29px;
+    top: 312px;
+    right: 33px;
   }
 
   @include media-desktop {
@@ -120,7 +120,7 @@
 }
 
 .promo__link {
-  margin-top: 5px;
+  margin-top: 2px;
   text-decoration: none;
 
   @include media-tablet {
