@@ -13,9 +13,6 @@
   align-items: center;
 
   @include media-desktop {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
@@ -46,7 +43,6 @@
 
   @include media-desktop {
     padding-right: 61px;
-    // width: calc(50% - 40px);
   }
 }
 

@@ -1,5 +1,4 @@
 .promo {
-  // position: relative;
   padding-top: 27px;
   min-height: 460px;
   text-align: center;
@@ -71,10 +70,6 @@
     @include title-fs60-lh60;
     color: $black-text;
   }
-
-  // @include media-desktop {
-  //   max-width: 450px;
-  // }
 }
 
 .promo__desc {
