@@ -13,9 +13,10 @@
   align-items: center;
   padding-top: 30px;
   padding-bottom: 25px;
+  z-index: 1;
 
   @include media-tablet {
-    padding: 66px 71px 56px;
+    padding: 63px 71px 56px;
     background-color: $primary-grey-bg;
   }
 
@@ -98,7 +99,7 @@
     background-image: url("../img/footer/map/desktop/bg-map-desktop@1x.png");
 
     @include retina {
-      background-image: url("../img/footer/map/desktop/bg-map-desktop@2px.png");
+      background-image: url("../img/footer/map/desktop/bg-map-desktop@2x.png");
     }
   }
 }
@@ -152,16 +153,8 @@
   @include media-tablet {
     margin-left: auto;
     border: none;
-    padding: 0;
+    padding: 5px 0 0 0;
   }
-}
-
-.social__item:first-of-type {
-  margin-right: 36px;
-}
-
-.social__item:last-of-type {
-  margin-left: 33px;
 }
 
 .footer__developer-link {

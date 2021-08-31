@@ -10,6 +10,7 @@
   @include media-desktop {
     margin-top: -250px;
     background-image: none;
+    justify-content: flex-start;
   }
 }
 
@@ -20,8 +21,8 @@
     overflow: hidden;
     background: linear-gradient(
       to bottom,
-      $primary-bg-color 141px,
-      $primary-grey-bg 138px
+      $primary-bg-color 162px,
+      $primary-grey-bg 137px
     );
     width: 363px;
   }

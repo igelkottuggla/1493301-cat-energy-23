@@ -15,6 +15,10 @@
   }
 
   @include media-tablet {
+    min-height: 510px;
+  }
+
+  @include media-desktop {
     min-height: 515px;
   }
 }
@@ -39,6 +43,7 @@
 
   @include media-desktop {
     padding-bottom: 0;
+    justify-content: center;
     margin-top: 81px;
     min-height: 431px;
   }
@@ -87,10 +92,10 @@
   height: 100%;
 
   @include media-tablet {
-    margin-bottom: 37px;
+    margin-bottom: 36px;
   }
 
-  @include media-tablet {
+  @include media-desktop {
     margin-bottom: 32px;
   }
 }
@@ -132,9 +137,14 @@
   padding-right: 66px;
 
   @include media-tablet {
-    margin: 0 auto 21px;
+    margin: 0 auto 14px;
+    padding-top: 5px;
     padding-right: 0;
     max-width: 157px;
+  }
+
+  @include media-desktop {
+    margin: 0 auto 21px;
   }
 }
 
@@ -161,6 +171,11 @@
     margin-bottom: 29px;
     max-width: 134px;
   }
+
+  @include media-desktop {
+    margin-top: auto;
+    margin-bottom: 23px;
+  }
 }
 
 .card__table {
@@ -173,7 +188,15 @@
     display: flex;
     padding-top: 6px;
     padding-bottom: 6px;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid $border-color;
+    flex-wrap: wrap;
+    max-width: 250px;
+  }
+
+  @include media-desktop {
+    max-width: 170px;
   }
 }
 
@@ -183,6 +206,7 @@
 
   @include media-tablet {
     font-size: $card-table-tablet-fs;
+    width: 50%;
   }
 }
 
@@ -211,7 +235,7 @@
   }
 
   @include media-desktop {
-    margin-bottom: 87px;
+    margin-bottom: 85px;
   }
 }
 

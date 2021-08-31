@@ -8,7 +8,7 @@
   }
 
   @include media-desktop {
-    margin-top: 45px;
+    margin-top: 55px;
     border-bottom: none;
   }
 }
@@ -26,8 +26,8 @@
   @include media-tablet {
     display: grid;
     grid-template-columns: repeat(2, 250px);
-    column-gap: 143px;
-    row-gap: 48px;
+    column-gap: 133px;
+    row-gap: 44px;
     counter-reset: list;
   }
 
@@ -122,5 +122,6 @@
   @include media-tablet {
     padding-left: 0;
     padding-bottom: 30px;
+    margin-top: 151px;
   }
 }

@@ -1,3 +1,15 @@
+.social__item:first-of-type {
+  margin-right: 36px;
+
+  @include media-tablet {
+    margin-right: 30px;
+  }
+}
+
+.social__item:last-of-type {
+  margin-left: 33px;
+}
+
 .social__link {
   color: $grey-text;
 }
@@ -36,7 +48,7 @@
   height: 19px;
 
   @include media-tablet {
-    width: 13px;
-    height: 27px;
+    width: 15px;
+    height: 28px;
   }
 }

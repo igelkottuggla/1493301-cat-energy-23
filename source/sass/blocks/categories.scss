@@ -13,8 +13,9 @@
   align-items: center;
 
   @include media-desktop {
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
   }
 }
 
@@ -30,8 +31,8 @@
   }
 
   @include media-desktop {
-    padding: 85px 51px 55px 52px;
-    width: calc(50% - 40px);
+    padding: 81px 51px 25px 52px;
+    height: 100%;
   }
 }
 
@@ -42,7 +43,6 @@
 
   @include media-desktop {
     padding-right: 61px;
-    width: calc(50% - 40px);
   }
 }
 

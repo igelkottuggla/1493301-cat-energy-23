@@ -3,7 +3,7 @@
   margin-top: 25px;
 
   @include media-tablet {
-    margin-top: 65px;
+    margin-top: 62px;
   }
 
   @include media-desktop {
@@ -32,7 +32,7 @@
 .add-more__heading {
   @include secondary-subtitles-fs24-lh24;
   position: relative;
-  margin: 0 0 34px;
+  margin: 0 0 36px;
 
   @include media-tablet {
     @include title-fs36-lh36;
@@ -41,6 +41,7 @@
   }
 
   @include media-desktop {
+    margin-bottom: 79px;
     padding-left: 0;
   }
 }
@@ -62,6 +63,7 @@
 
   @include media-desktop {
     left: 30%;
+    top: 20px;
   }
 }
 
@@ -79,6 +81,7 @@
 
   @include media-desktop {
     right: 103%;
+    top: 20px;
   }
 }
 

@@ -8,8 +8,8 @@
     background: linear-gradient(
       180deg,
       $primary-bg-color 0%,
-      $primary-bg-color 53%,
-      $primary-grey-bg 53%
+      $primary-bg-color 55%,
+      $primary-grey-bg 36%
     );
   }
 
@@ -61,6 +61,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-bottom: 50px;
   }
 }
 

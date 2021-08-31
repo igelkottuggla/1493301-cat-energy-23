@@ -1,5 +1,4 @@
 .promo {
-  position: relative;
   padding-top: 27px;
   min-height: 460px;
   text-align: center;
@@ -22,8 +21,8 @@
   }
 
   @include media-desktop {
-    min-height: 650px;
-    position: relative;
+    min-height: 670px;
+    position: static;
   }
 }
 
@@ -41,7 +40,7 @@
       url("../img/promo/desktop/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
-    top: -120px;
+    top: 0;
     right: 0;
     z-index: -1;
 
@@ -58,7 +57,9 @@
   }
 
   @include media-desktop {
-    padding: 75px 80px 30px 80px;
+    position: relative;
+    padding: 75px 20px 30px 80px;
+    max-width: 530px;
   }
 }
 
@@ -68,10 +69,6 @@
   @include media-tablet {
     @include title-fs60-lh60;
     color: $black-text;
-  }
-
-  @include media-desktop {
-    max-width: 450px;
   }
 }
 
@@ -100,25 +97,25 @@
 
   @include media-tablet {
     position: absolute;
-    width: 629px;
+    width: 703px;
     height: 609px;
     z-index: -1;
-    top: 223px;
-    right: 29px;
+    top: 312px;
+    right: 33px;
   }
 
   @include media-desktop {
     position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-30%);
+    top: 55%;
+    left: 36%;
+    transform: translate(50%, -50%);
     width: 552px;
     height: 499px;
   }
 }
 
 .promo__link {
-  margin-top: 5px;
+  margin-top: 2px;
   text-decoration: none;
 
   @include media-tablet {
