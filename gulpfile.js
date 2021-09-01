@@ -53,7 +53,7 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
-// Images
+//Images
 
 const optimizeImages = () => {
   return gulp
@@ -62,13 +62,13 @@ const optimizeImages = () => {
     .pipe(gulp.dest("build/img"));
 };
 
-exports.optimizeImages = optimizeImages;
+exports.images = optimizeImages;
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}").pipe(gulp.dest("build/img"));
 };
 
-exports.copyImages = copyImages;
+exports.images = copyImages;
 
 // WebP
 
@@ -105,6 +105,8 @@ const copy = (done) => {
       [
         "source/fonts/*.{woff2,woff}",
         "source/*.ico",
+        "source/img/**/*.svg",
+        "!source/img/svg/*.svg",
         "source/site.webmanifest",
       ],
       {
