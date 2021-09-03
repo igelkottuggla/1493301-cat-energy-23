@@ -36,9 +36,15 @@ exports.styles = styles;
 const html = () => {
   return gulp
     .src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true,
+      })
+    )
     .pipe(gulp.dest("build"));
 };
+
+exports.html = html;
 
 // Scripts
 
@@ -75,7 +81,11 @@ exports.images = copyImages;
 const createWebp = () => {
   return gulp
     .src("source/img/**/*.{jpg,png}")
-    .pipe(webp({ quality: 90 }))
+    .pipe(
+      webp({
+        quality: 90,
+      })
+    )
     .pipe(gulp.dest("build/img"));
 };
 
@@ -85,7 +95,7 @@ exports.createWebp = createWebp;
 
 const sprite = () => {
   return gulp
-    .src("source/img/*.svg")
+    .src("source/img/sprite-icons/*.svg")
     .pipe(
       svgstore({
         inlineSvg: true,
@@ -124,6 +134,8 @@ exports.copy = copy;
 const clean = () => {
   return del("build");
 };
+
+exports.clean = clean;
 
 // Server
 
