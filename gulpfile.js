@@ -8,11 +8,11 @@ const csso = require("postcss-csso");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
-const squoosh = require("gulp-libsquoosh");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const imagemin = require("gulp-imagemin");
 
 // Styles
 
@@ -59,16 +59,22 @@ const scripts = () => {
 
 exports.scripts = scripts;
 
-//Images
+// Images
 
 const optimizeImages = () => {
   return gulp
-    .src("source/img/**/*.{png,jpg,svg}")
-    .pipe(squoosh())
+    .src("source/img/**/*.{jpg,png,svg}")
+    .pipe(
+      imagemin([
+        imagemin.mozjpeg({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 3 }),
+        imagemin.svgo(),
+      ])
+    )
     .pipe(gulp.dest("build/img"));
 };
 
-exports.images = optimizeImages;
+exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
   return gulp.src("source/img/**/*.{png,jpg,svg}").pipe(gulp.dest("build/img"));
