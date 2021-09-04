@@ -15,7 +15,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="./browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <link type="text/css" rel="stylesheet" href="./css/style.css">
+    <link type="text/css" rel="stylesheet" href="./css/style.min.css">
     <title>HTML Academy: Cat energy</title>
 </head>
 
@@ -27,9 +27,9 @@
         <div class="header__wrapper wrapper">
             <a class="header__logo-pic-link">
                 <picture>
-                    <source srcset="./img/svg/logo-desktop.svg" media="(min-width: 1440px)">
-                    <source srcset="./img/svg/logo-tablet.svg" media="(min-width: 768px)">
-                    <img class="header__logo" src="./img/svg/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
+                      <source srcset="./img/svg/logo-desktop.svg" media="(min-width: 1440px)">
+                      <source srcset="./img/svg/logo-tablet.svg" media="(min-width: 768px)">
+                      <img class="header__logo" src="./img/svg/logo-mobile.svg" width="191" height="39" alt="Логотип компании Cat Energy">
                 </picture>
             </a>
             <button class="header__nav-button" type="button" aria-label="Переключить меню">
@@ -61,6 +61,12 @@
                     <h1 class="promo__main-title main-title">Функциональное питание для котов</h1>
                     <p class="promo__desc">Занялся собой? Займись котом!</p>
                     <picture>
+                        <source type="image/webp" media="(min-width: 1440px)"
+                        srcset="./img/promo/desktop/index-can-desktop@1x.webp 1x, ./img/promo/desktop/index-can-desktop@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)"
+                        srcset="./img/promo/tablet/index-can-tablet@1x.webp 1x, ./img/promo/tablet/index-can-tablet@2x.webp 2x">
+                        <source type="image/webp" srcset="./img/promo/mobile/index-can-mobile@1x.webp 1x, ./img/promo/mobile/index-can-mobile@2x.webp 2x">
+
                         <source srcset="./img/promo/desktop/index-can-desktop@1x.png 1x, ./img/promo/desktop/index-can-desktop@2x.png 2x" media="(min-width: 1440px)">
                         <source srcset="./img/promo/tablet/index-can-tablet@1x.jpg 1x, ./img/promo/tablet/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
                         <img class="promo__pic" src="./img/promo/mobile/index-can-mobile@1x.png" srcset="./img/promo/mobile/index-can-mobile@2x.png 2x" alt="Корм для кошек Cat Energy с курицей" width="280" height="270">
@@ -157,6 +163,12 @@
                         <div class="models__images">
                             <div class="models__before">
                                 <picture>
+                                    <source type="image/webp" media="(min-width: 1440px)"
+                                    srcset="./img/models/desktop/before-desktop@1x.webp 1x, ./img/models/desktop/before-desktop@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 768px)"
+                                    srcset="./img/models/tablet/before-tablet@1x.webp 1x, ./img/models/tablet/before-tablet@2x.webp 2x">
+                                    <source type="image/webp" srcset="./img/models/mobile/before-mobile@1x.webp 1x, ./img/models/mobile/before-mobile@2x.webp 2x">
+
                                     <source srcset="./img/models/desktop/before-desktop@1x.png 1x, ./img/models/desktop/before-desktop@2x.png 2x" media="(min-width: 1440px)">
                                     <source srcset="./img/models/tablet/before-tablet@1x.png 1x, ./img/models/tablet/before-tablet@2x.png 2x" media="(min-width: 768px)">
                                     <img src="./img/models/tablet/before-tablet@1x.png" class="models__img"  srcset="./img/models/mobile/before-mobile@2x.png 2x" alt="Cat before dieat">
@@ -164,6 +176,12 @@
                             </div>
                             <div class="models__after">
                                 <picture>
+                                    <source type="image/webp" media="(min-width: 1440px)"
+                                    srcset="./img/models/desktop/after-desktop@1x.webp 1x,  ./img/models/desktop/after-desktop@2x.webp 2x">
+                                    <source type="image/webp" media="(min-width: 768px)"
+                                    srcset="./img/models/tablet/after-tablet@1x.webp 1x,  ./img/models/tablet/after-tablet@2x.webp 2x">
+                                    <source type="image/webp" srcset="./img/models/mobile/after-mobile@1x.webp 1x,  ./img/models/mobile/after-mobile@2x.webp 2x">
+
                                     <source srcset="./img/models/desktop/after-desktop@1x.png 1x, ./img/models/desktop/after-desktop@2x.png 2x" media="(min-width: 1440px)">
                                     <source srcset="./img/models/tablet/after-tablet@1x.png 1x, ./img/models/tablet/after-tablet@2x.png 2x" media="(min-width: 768px)">
                                     <img src="./img/models/mobile/after-mobile@1x.png" srcset="./img/models/mobile/after-mobile@2x.png 2x" class="models__img" alt="Cat after diet">
@@ -215,21 +233,21 @@
                   <li class="social__item">
                       <a class="social__link social__link--vk" href="#" aria-label="Вконтакте">
                           <svg class="social__svg" width="30" height="22" viewbox="0 0 22 12" >
-                              <use xlink:href="./img/sprite.svg#vk_icon"></use>
+                              <use xlink:href="./img/sprite.svg#icon-vk"></use>
                           </svg>
                       </a>
                   </li>
                   <li class="social__item">
                       <a class="social__link social__link--inst" href="#" aria-label="Instagram">
                           <svg class="social__svg" width="23" height="23" viewbox="0 0 16 16">
-                              <use xlink:href="./img/sprite.svg#inst_icon"></use>
+                              <use xlink:href="./img/sprite.svg#icon-insta"></use>
                           </svg>
                       </a>
                   </li>
                   <li class="social__item">
                       <a class="social__link social__link--fb" href="#" aria-label="Facebook">
                           <svg class="social__svg" width="25" height="29" viewbox="0 0 10 19">
-                              <use xlink:href="./img/sprite.svg#fb_icon"></use>
+                              <use xlink:href="./img/sprite.svg#icon-fb"></use>
                           </svg>
                       </a>
                   </li>
@@ -239,13 +257,12 @@
                   <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу интенсива по адаптивной верстке и автоматизации">
                       <p class="footer__developer-text">HTML Academy</p>
                       <svg class="footer__svg footer__developer-icon" viewbox="0 0 60 60" width="40" height="40">
-                          <use  xlink:href="./img/sprite.svg#html_icon"></use>
+                          <use  xlink:href="./img/sprite.svg#htmlacademy"></use>
                       </svg>
                   </a>
               </div>
           </div>
     </footer>
-    <script src="js/menu-toggle.js"></script>
-    <script src="js/map.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 </html>
