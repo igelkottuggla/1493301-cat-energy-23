@@ -23,8 +23,6 @@
 </head>
 
 <body>
-    <!-- class: header--no-js, menu is open, button is hidden
-      class: header--opened, toggles menu using JS, toggles nav-burger -->
 
     <header class="header header--index header--no-js">
         <div class="header__wrapper wrapper">
@@ -57,7 +55,7 @@
     </header>
 
     <main class="container">
-        <section class="order order__wrapper wrapper">
+        <section class="order wrapper">
             <h1 class="order__main-title main-title">Подбор программы</h1>
             <p class="order__desc">
             Заполните анкету, и мы подберем программу питания для вашего кота
@@ -137,9 +135,10 @@
                 </div>
                 <div class="order__comment">
                     <fieldset class="order__control-groups">
-                        <legend class="order__fildset-title">
-                        Комментарий
+                        <legend class="visually-hidden">
+                        Комментарий владельца
                         </legend>
+                        <label for="your-comment" class="order__fildset-title">Комментарий</label>
                         <textarea class="order__comment-field" id="your-comment" name="comment" placeholder="Расскажите обо всех повадках кота"
                         ></textarea>
                     </fieldset>
@@ -181,21 +180,22 @@
     </main>
 
     <footer class="footer">
+
           <div class="footer__contacts">
             <div class="wrapper">
-                <h2 class="footer__contacts-title">Приглашаем к сотрудничеству дилеров!</h2>
+              <div class="footer__contacts-layout">
+                <h2 class="footer__contacts-title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
                 <p class="footer__contacts-address">ул. Большая Конюшенная, д. 19/8 <span class="footer__contacts-city">Санкт-Петербург</span> </p>
+              </div>
             </div>
-
           </div>
           <div class="footer__map" id="map">
-
           </div>
 
           <div class="footer__links wrapper">
               <div class="footer__block footer__block--logo">
-                  <a class="footer__logo footer__logo--footer">
-                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo" class="footer__logo-img">
+                  <a class="footer__logo footer__logo--footer" href="./index.html">
+                      <img src="./img/svg/logo-footer.svg" width="128" height="24" alt="Cat Energy Logo" class="footer__logo-img" loading="lazy">
                   </a>
               </div>
 

@@ -15,7 +15,7 @@
   }
 
   @include media-tablet {
-    min-height: 510px;
+    min-height: 513px;
   }
 
   @include media-desktop {
@@ -35,8 +35,8 @@
 
 .card:last-child {
   @include media-tablet {
-    justify-content: flex-start;
-    margin-top: 87px;
+    justify-content: center;
+    margin-top: 80px;
     min-height: 429px;
     border: 2px solid $primary-grey-bg;
   }
@@ -60,7 +60,7 @@
     height: 30px;
 
     @include media-tablet {
-      top: 50px;
+      top: 56px;
       width: 60px;
       height: 60px;
     }
@@ -167,14 +167,14 @@
   text-align: center;
 
   @include media-tablet {
-    margin-top: 155px;
-    margin-bottom: 29px;
+    margin-top: auto;
+    margin-bottom: 19px;
     max-width: 134px;
   }
 
   @include media-desktop {
     margin-top: auto;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 }
 

@@ -8,10 +8,15 @@
 
 .social__item:last-of-type {
   margin-left: 33px;
+
+  @include media-tablet {
+    margin-left: 30px;
+  }
 }
 
 .social__link {
   color: $grey-text;
+  transition: all 0.2s;
 }
 
 .social__link:hover {

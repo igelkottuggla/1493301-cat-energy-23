@@ -21,7 +21,7 @@
   }
 
   @include media-desktop {
-    min-height: 670px;
+    min-height: 675px;
     position: static;
   }
 }
@@ -39,7 +39,7 @@
     background: linear-gradient(to top, $white 0, $promo-bg 0),
       url("../img/promo/desktop/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: contain;
     top: 0;
     right: 0;
     z-index: -1;
@@ -101,21 +101,22 @@
     height: 609px;
     z-index: -1;
     top: 312px;
-    right: 33px;
+    right: 30px;
   }
 
   @include media-desktop {
     position: absolute;
     top: 55%;
-    left: 36%;
+    left: 32%;
     transform: translate(50%, -50%);
     width: 552px;
     height: 499px;
+    max-width: unset;
   }
 }
 
 .promo__link {
-  margin-top: 2px;
+  margin-top: 3px;
   text-decoration: none;
 
   @include media-tablet {

@@ -6,7 +6,7 @@
   }
 }
 
-.order__wrapper {
+.order.wrapper {
   @include media-tablet {
     padding-left: 70px;
     padding-right: 70px;
@@ -58,7 +58,7 @@
   margin-bottom: 13px;
 
   @include media-tablet {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
 }
 
@@ -79,6 +79,7 @@
   position: relative;
   padding-left: 45px;
   margin-bottom: 12px;
+  cursor: pointer;
 
   @include media-tablet {
     margin-bottom: 9px;
@@ -126,6 +127,14 @@
   border: 1px solid $label-hover-color;
 }
 
+.order__label--radio:hover {
+  opacity: 0.6;
+}
+
+.order__label--radio:active {
+  opacity: 0.3;
+}
+
 .order__label--disabled {
   color: $dark-grey-text;
   opacity: 0.3;
@@ -140,11 +149,12 @@
 
   @include media-tablet {
     @include text-fs20-lh30;
-    padding: 11px 10px 10px 23px;
+    padding: 11px 9px 9px 17px;
   }
 }
 
 .order__input:focus {
+  outline: none;
   border: 2px solid $dark-border;
 }
 
@@ -183,6 +193,14 @@
   background-clip: content-box;
 }
 
+.order__extra-item .order__label:hover {
+  opacity: 0.6;
+}
+
+.order__extra-item .order__label:active {
+  opacity: 0.3;
+}
+
 .order__fildset-title {
   @include big-text-fs24;
   margin: 0 0 35px;
@@ -206,7 +224,7 @@
     width: 100vw;
     height: 3px;
     right: 115%;
-    top: 25px;
+    top: 22px;
     background-color: $green-bg-color;
     transform: translateY(-50%);
   }
@@ -221,13 +239,13 @@
   content: "";
   width: 100vw;
   height: 2px;
-  top: 18px;
+  top: 16px;
   left: 115%;
   background-color: $green-bg-color;
   transform: translateY(-50%);
 
   @include media-tablet {
-    top: 25px;
+    top: 22px;
     left: 90%;
   }
 
@@ -260,11 +278,11 @@
 
 .order__aim {
   position: relative;
-  padding-top: 27px;
+  padding-top: 28px;
   width: 100%;
 
   @include media-tablet {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-left: 40px;
     margin-right: 35px;
     padding-bottom: 5px;
@@ -273,6 +291,7 @@
 
   @include media-desktop {
     margin: 0;
+    padding-top: 30px;
     align-self: start;
     border: 1px solid $grey-border;
   }
@@ -321,18 +340,20 @@
   margin-bottom: 10px;
 
   @include media-tablet {
-    margin-top: 77px;
+    margin-top: 76px;
   }
 
   @include media-desktop {
-    margin-top: 40px;
+    margin-top: 39px;
   }
 }
 
 .order__owner-data .order__fildset-title {
+  margin-bottom: 35px;
   width: 75%;
 
   @include media-tablet {
+    margin-bottom: 75px;
     width: 90%;
   }
 
@@ -357,21 +378,28 @@
   }
 }
 
+.order__owner-data .order__fildset-title::before {
+  @include media-tablet {
+    right: 107%;
+  }
+}
+
 .order__owner-data .order__input:focus + .order__input-icon {
   color: $input-hover-color;
 }
 
 .order__comment {
   margin-top: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 
   @include media-tablet {
-    margin-top: 48px;
+    margin-top: 47px;
   }
 }
 
 .order__comment .order__fildset-title {
   position: relative;
+  display: block;
   margin-bottom: 37px;
 
   @include media-tablet {
@@ -380,11 +408,12 @@
 }
 
 .order__comment-field {
-  padding: 9px 15px 15px 15px;
+  padding: 9px 10px 15px 15px;
   width: 100%;
   min-height: 150px;
 
   @include media-tablet {
+    padding-left: 17px;
     min-height: 174px;
   }
 
@@ -403,6 +432,11 @@
   }
 }
 
+.order__comment-field:focus {
+  outline: none;
+  border: 2px solid $dark-border;
+}
+
 .order__extra {
   @include media-tablet {
     margin-top: 60px;
@@ -418,11 +452,11 @@
   margin-bottom: 40px;
 
   @include media-tablet {
-    margin-bottom: 63px;
+    margin-bottom: 62px;
   }
 
   @include media-desktop {
-    margin-bottom: 66px;
+    margin-bottom: 63px;
   }
 }
 
@@ -452,6 +486,7 @@
 .order__extra-item .order__label {
   position: relative;
   color: $black-text;
+  cursor: pointer;
 }
 
 .order__extra-item .order__label::before {
@@ -485,7 +520,7 @@
 }
 
 .order__footnote {
-  margin-top: 19px;
+  margin-top: 18px;
   margin-bottom: 32px;
 
   @include media-tablet {
@@ -507,10 +542,14 @@
 
 .order__button {
   @include small-titles-fs16;
+  padding-top: 10px;
+  padding-bottom: 10px;
   line-height: $order-btn-lh;
   width: 100%;
 
   @include media-tablet {
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-size: $btn-tablet-fs;
   }
 }

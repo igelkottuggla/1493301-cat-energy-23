@@ -8,6 +8,7 @@
   font-size: 14px;
   line-height: 20px;
   color: $light-text;
+  transition: all 0.2s;
 
   @include media-tablet {
     padding-top: 16px;

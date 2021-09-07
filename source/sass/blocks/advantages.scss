@@ -15,25 +15,31 @@
 
 .advantages__main-title {
   @include secondary-titles-fs36-lh40;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @include media-tablet {
     @include title-fs60-lh60;
+    margin-bottom: 37px;
+  }
+
+  @include media-desktop {
+    @include title-fs60-lh60;
+    margin-bottom: 40px;
   }
 }
 
 .advantages__list {
   @include media-tablet {
     display: grid;
-    grid-template-columns: repeat(2, 250px);
-    column-gap: 133px;
-    row-gap: 44px;
+    grid-template-columns: repeat(2, 260px);
+    column-gap: 123px;
+    row-gap: 47px;
     counter-reset: list;
   }
 
   @include media-desktop {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 85px;
+    column-gap: 80px;
   }
 }
 
@@ -70,12 +76,6 @@
     &::after {
       right: 0;
     }
-  }
-}
-
-.advantages__item:nth-of-type(even) {
-  @include media-tablet {
-    margin-right: 78px;
   }
 }
 
@@ -122,6 +122,6 @@
   @include media-tablet {
     padding-left: 0;
     padding-bottom: 30px;
-    margin-top: 151px;
+    margin-top: auto;
   }
 }

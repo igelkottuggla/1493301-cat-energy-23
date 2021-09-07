@@ -1,15 +1,15 @@
 .slider {
   position: relative;
-  margin-top: 33px;
+  margin-top: 32px;
   width: 100%;
 
   @include media-tablet {
-    margin-top: 25px;
+    margin-top: 12px;
     margin-bottom: 67px;
   }
 
   @include media-desktop {
-    margin-top: 30px;
+    margin-top: 33px;
   }
 }
 
@@ -24,23 +24,26 @@
   @include reset-style-button;
   font-family: $main-font;
   background-color: transparent;
+  border-bottom: 1px dotted $slider-btn-dots-border;
 
   @include media-tablet {
     @include text-fs20-lh30;
-    border-bottom: 1px dotted $light-border;
   }
 }
 
 .slider__button:hover {
-  border-bottom: 1px solid $light-border;
+  position: relative;
+  opacity: 0.6;
+  border-bottom: 1px solid $slider-btn-dots-border;
 }
 
 .slider__button:active {
   border-bottom: none;
+  opacity: 0.3;
 }
 
 .slider__button--before {
-  margin-left: 37px;
+  margin-left: 38px;
 
   @include media-tablet {
     margin-left: 63px;
@@ -53,7 +56,7 @@
 
 .slider__button--after {
   margin-left: auto;
-  margin-right: 35px;
+  margin-right: 33px;
 
   @include media-tablet {
     margin-right: 62px;
@@ -66,7 +69,7 @@
 
 .slider__bar {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 84px;
@@ -82,7 +85,8 @@
   }
 
   @include media-desktop {
-    transform: translateX(-45%);
+    top: 45%;
+    transform: translate(-45%, -50%);
   }
 }
 
@@ -101,7 +105,7 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
-    top: 0;
+    top: 4px;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: $primary-bg-color;
