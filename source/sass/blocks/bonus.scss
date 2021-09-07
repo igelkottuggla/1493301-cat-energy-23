@@ -5,6 +5,7 @@
   min-height: 290px;
   background: $basic-green;
   background-image: url("../img/bonus/mobile/gift-photo-mobile@1x.jpg");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
@@ -23,7 +24,7 @@
   @include media-tablet {
     flex-direction: row;
     padding: 0;
-    margin-top: 67px;
+    margin-top: 70px;
     margin-bottom: 74px;
     padding-right: 124px;
     width: 100%;
@@ -64,7 +65,7 @@
   transform: translateX(-50%);
 
   @include media-tablet {
-    top: 50%;
+    top: 49%;
     left: 80px;
     transform: translate(0, -50%);
   }

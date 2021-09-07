@@ -8,7 +8,7 @@
   }
 
   @include media-desktop {
-    margin-top: -250px;
+    margin-top: -260px;
     background-image: none;
     justify-content: flex-start;
   }
@@ -17,23 +17,24 @@
 .models__before {
   @include media-tablet {
     position: absolute;
-    padding-left: 30px;
+    padding-left: 24px;
     overflow: hidden;
     background: linear-gradient(
       to bottom,
-      $primary-bg-color 162px,
+      $primary-bg-color 170px,
       $primary-grey-bg 137px
     );
     width: 363px;
   }
 
   @include media-desktop {
-    padding-left: 15px;
+    padding-left: 10px;
     background: linear-gradient(
       to bottom,
-      $primary-bg-color 180px,
+      $primary-bg-color 188px,
       $primary-grey-bg 184px
     );
+    width: 375px;
   }
 }
 
@@ -52,7 +53,7 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    margin-top: 24px;
+    margin-top: 26px;
   }
 
   @include media-desktop {
@@ -65,14 +66,14 @@
 
   @include media-tablet {
     display: block;
-    margin-left: auto;
+    padding-left: 24px;
   }
 
   @include media-desktop {
     width: 100%;
     margin-left: 0;
     padding-right: 0;
-    padding-left: 15px;
+    padding-left: 10px;
   }
 }
 
@@ -82,10 +83,10 @@
   max-width: unset;
 
   @include media-tablet {
-    height: 505px;
+    height: 518px;
   }
 
   @include media-desktop {
-    height: 510px;
+    height: 515px;
   }
 }

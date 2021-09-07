@@ -12,11 +12,11 @@
 
   @include media-tablet {
     margin-top: 54px;
-    margin-bottom: 81px;
+    margin-bottom: 79px;
   }
 
   @include media-desktop {
-    margin-top: 67px;
+    margin-top: 69px;
   }
 }
 
@@ -31,7 +31,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     column-gap: 60px;
-    row-gap: 59px;
+    row-gap: 58px;
   }
 
   @include media-desktop {

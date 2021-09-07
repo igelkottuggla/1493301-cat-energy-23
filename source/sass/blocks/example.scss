@@ -6,19 +6,18 @@
   @include media-tablet {
     padding-bottom: 0;
     background: linear-gradient(
-      180deg,
-      $primary-bg-color 0%,
-      $primary-bg-color 55%,
-      $primary-grey-bg 36%
+      to bottom,
+      $primary-bg-color 579px,
+      $primary-grey-bg 137px
     );
   }
 
   @include media-desktop {
-    margin-top: 20px;
-    min-height: 600px;
+    margin-top: 25px;
+    min-height: 595px;
     background: linear-gradient(
         to bottom,
-        $primary-bg-color 138px,
+        $primary-bg-color 135px,
         transparent 130px
       ),
       linear-gradient(to right, $primary-grey-bg 73%, $secondary-grey-bg 40%);
@@ -38,12 +37,12 @@
   text-align: center;
 
   @include media-tablet {
-    margin-top: 54px;
+    margin-top: 52px;
     width: 100%;
   }
 
   @include media-desktop {
-    margin-top: 45px;
+    margin-top: 67px;
   }
 }
 
@@ -71,7 +70,7 @@
 
   @include media-tablet {
     @include title-fs60-lh60;
-    margin-bottom: 63px;
+    margin-bottom: 66px;
   }
 
   @include media-desktop {
@@ -87,6 +86,10 @@
     @include basic-text-fs16-lh20;
     padding-right: 25px;
     line-height: $basic-text-tablet-lh;
+  }
+
+  @include media-desktop {
+    padding-right: 0;
   }
 }
 
@@ -106,6 +109,11 @@
 
   @include media-tablet {
     width: 162px;
+    padding-bottom: 9px;
+  }
+
+  @include media-desktop {
+    padding-top: 13px;
   }
 }
 
@@ -177,7 +185,7 @@
   @include media-desktop {
     flex-direction: row;
     justify-content: flex-start;
-    margin-top: 59px;
+    margin-top: 61px;
     margin-left: 0;
     text-align: left;
     max-width: 100%;
@@ -195,6 +203,10 @@
     font-size: $example-result-fs;
     width: 100%;
   }
+
+  @include media-desktop {
+    width: 85%;
+  }
 }
 
 .example__result-title {
@@ -207,7 +219,7 @@
   text-transform: uppercase;
 
   @include media-tablet {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
     font-size: $example-result-fs;
     width: 100%;
   }

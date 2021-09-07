@@ -12,6 +12,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const concat = require("gulp-concat");
 const imagemin = require("gulp-imagemin");
 
 // Styles
@@ -51,6 +52,7 @@ exports.html = html;
 const scripts = () => {
   return gulp
     .src("source/js/*.js")
+    .pipe(concat("all.js"))
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))

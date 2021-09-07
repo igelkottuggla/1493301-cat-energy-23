@@ -30,16 +30,17 @@ $currentColor: inherit;
 
 /* BG colors */
 $primary-bg-color: $white;
-$nav-link-decor-tablet: $basic-green;
 $green-bg-color: $basic-green;
 $primary-grey-bg: $basic-light-grey;
 $secondary-grey-bg: $basic-dark-grey;
-$button-color: $basic-green;
-$btn-hover-color: $basic-green-2;
 $primary-green-bg: $basic-green;
-$green-color-links: $basic-green;
+$promo-bg: rgba(104, 183, 56, 0.85);
 
 /* Elements' colors */
+$button-color: $basic-green;
+$nav-link-decor-tablet: $basic-green;
+$btn-hover-color: $basic-green-2;
+$green-color-links: $basic-green;
 $input-hover-color: $basic-green;
 $dark-border: $special-dark-grey-2;
 $error-color-element: $status_error;
@@ -58,7 +59,7 @@ $promo-bg: $basic-green-2;
 $categories-paragrah-decor-border: $grey-line;
 $slider-bar-bg: $deep-grey;
 $slider-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
-$promo-bg: rgba(104, 183, 56, 0.85);
+$slider-btn-dots-border: rgba(0, 0, 0, 0.24);
 
 /* Font weight */
 $font-weight-normal: 400;
@@ -68,14 +69,11 @@ $font-weight-bold: 500;
 $basic-text-tablet-lh: 24px;
 $plain-test-lh: 14px;
 $plain-text-tablet-lh: 20px;
-
 $btn-tablet-fs: 20px;
-
 $footer-contacts-tablet-fs: 20px;
 $footer-contacts-tablet-lh: 25px;
 $footer-adress-tablet-lh: 20px;
 $footer-dev-link-lh: 19px;
-
 $nav-desltop-lh: 30px;
 $nav-desktop-fs: 20px;
 $categoris-tablet-lh: 37px;

@@ -27,9 +27,23 @@
     display: none;
   }
 
+  .header__wrapper {
+    padding-bottom: 0;
+  }
+
   .header__nav {
+    position: static;
+    height: 100%;
     transform: scaleY(1);
     background-color: $currentColor;
+  }
+
+  .header__logo-pic-link {
+    padding-bottom: 15px;
+
+    @include media-tablet {
+      padding: 0;
+    }
   }
 }
 
@@ -41,7 +55,7 @@
     }
 
     .header__nav-burger::after {
-      left: -8px;
+      left: -9px;
       transform: rotate(-45deg) translate(12px, 0);
     }
 
@@ -76,6 +90,7 @@
 }
 
 .header__nav-button {
+  position: relative;
   width: 25px;
   height: 25px;
   background-color: transparent;
@@ -89,8 +104,8 @@
 
 .header__nav-burger {
   position: absolute;
-  right: 20px;
   display: block;
+  right: 0;
   height: 2px;
   width: 24px;
   background-color: $nav-burger-color;
