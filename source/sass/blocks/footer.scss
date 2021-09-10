@@ -71,6 +71,7 @@
 
 .footer__contacts-title {
   @include basic-text-fs16-lh20;
+  @include reset-text-slyle;
   font-family: $main-font;
   text-transform: uppercase;
 
@@ -94,6 +95,7 @@
 
 .footer__contacts-address {
   @include plain-text-fs14;
+  @include reset-text-slyle;
   margin-left: 18px;
   line-height: $footer-adress-tablet-lh;
   color: $grey-text;
@@ -168,6 +170,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding-top: 40px;
   padding-bottom: 42px;
 
@@ -184,17 +187,22 @@
 }
 
 .footer__list {
+  @include reset-list-slyle;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   min-width: 145px;
+  width: 100%;
   padding-top: 22px;
   padding-bottom: 16px;
   border-top: 1px solid $grey-border;
   border-bottom: 1px solid $grey-border;
+  list-style: none;
 
   @include media-tablet {
+    justify-content: flex-end;
     margin-left: auto;
+    width: unset;
     border: none;
     padding: 0;
   }
@@ -226,12 +234,15 @@
 
 .footer__developer-text {
   @include basic-text-fs16-lh20;
+  @include reset-text-slyle;
   line-height: $footer-dev-link-lh;
   color: $grey-text;
 }
 
 .footer__developer-icon {
+  flex-shrink: 0;
   margin-right: -6px;
+  fill: currentColor;
 }
 
 .footer__block--copyright {

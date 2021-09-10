@@ -5,7 +5,7 @@
   min-height: 290px;
   background: $basic-green;
   background-image: url("../img/bonus/mobile/gift-photo-mobile@1x.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
@@ -15,7 +15,8 @@
   justify-content: flex-end;
   margin-top: 35px;
   margin-bottom: 33px;
-  padding: 10px 61px 43px 58px;
+  padding: 171px 61px 27px 58px;
+  height: 100%;
 
   @include retina {
     background-image: url("../img/bonus/mobile/gift-photo-mobile@2x.jpg");
@@ -23,10 +24,9 @@
 
   @include media-tablet {
     flex-direction: row;
-    padding: 0;
+    padding: 55px 124px 52px 58px;
     margin-top: 70px;
-    margin-bottom: 74px;
-    padding-right: 124px;
+    margin-bottom: 73px;
     width: 100%;
     min-height: 200px;
     background-size: cover;
@@ -42,7 +42,7 @@
     justify-content: flex-end;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 10px 43px 42px 41px;
+    padding: 184px 43px 42px 41px;
     min-height: 289px;
 
     background-image: url("../img/bonus/desktop/gift-photo-desktop@1x.jpg");
@@ -84,6 +84,7 @@
 
 .bonus__text {
   @include basic-text-fs16-lh20;
+  @include reset-text-slyle;
   color: $light-text;
 
   @include media-tablet {

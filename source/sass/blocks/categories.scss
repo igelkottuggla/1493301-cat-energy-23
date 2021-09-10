@@ -7,6 +7,7 @@
 }
 
 .categories__list {
+  @include reset-list-slyle;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,6 +130,7 @@
 
 .categories__title {
   @include big-text-fs24;
+  @include reset-text-slyle;
   margin-bottom: 30px;
   margin-left: 71px;
   line-height: $categoris-tablet-lh;
@@ -148,6 +150,7 @@
 
 .categories__description {
   @include plain-text-fs14;
+  @include reset-text-slyle;
   position: relative;
   color: $grey-text;
   padding-bottom: 22px;

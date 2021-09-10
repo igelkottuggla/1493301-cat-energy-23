@@ -2,14 +2,22 @@
   padding-top: 27px;
   min-height: 460px;
   text-align: center;
-  background-image: linear-gradient(to top, $white 0, $promo-bg 0),
+  background-image: linear-gradient(
+      to top,
+      $white 0,
+      $promo-bg-partial-opacity 0
+    ),
     url("../img/promo/mobile/index-background-mobile@1x.jpg");
   background-size: 100% 302px, 320px 302px;
   background-position: top center, top center;
   background-repeat: no-repeat, no-repeat;
 
   @include retina {
-    background-image: linear-gradient(to top, $white 0, $promo-bg 0),
+    background-image: linear-gradient(
+        to top,
+        $white 0,
+        $promo-bg-partial-opacity 0
+      ),
       url("../img/promo/mobile/index-background-mobile@2x.jpg");
   }
 
@@ -36,7 +44,7 @@
     min-height: 302px;
     height: 695px;
     width: 50%;
-    background: linear-gradient(to top, $white 0, $promo-bg 0),
+    background: linear-gradient(to top, $white 0, $promo-bg-partial-opacity 0),
       url("../img/promo/desktop/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size: contain;
@@ -45,7 +53,11 @@
     z-index: -1;
 
     @include retina {
-      background-image: linear-gradient(to top, $white 0, $promo-bg 0),
+      background-image: linear-gradient(
+          to top,
+          $white 0,
+          $promo-bg-partial-opacity 0
+        ),
         url("../img/promo/desktop/index-background-desktop@2x.jpg");
     }
   }
@@ -64,6 +76,7 @@
 }
 
 .promo__main-title {
+  @include reset-text-slyle;
   color: $light-text;
 
   @include media-tablet {
@@ -74,6 +87,7 @@
 
 .promo__desc {
   @include plain-text-fs14;
+  @include reset-text-slyle;
   margin-top: 25px;
   line-height: $plain-test-lh;
   font-family: $main-font;
