@@ -24,6 +24,7 @@
 
   @include media-tablet {
     flex-direction: row;
+    justify-content: flex-end;
     padding: 55px 124px 52px 58px;
     margin-top: 70px;
     margin-bottom: 73px;
