@@ -117,17 +117,30 @@
 .card__img {
   @include media-tablet {
     width: auto;
-    height: 206px;
+    height: 205px;
     max-width: unset;
+    margin-bottom: -8px;
   }
 
   @include media-desktop {
     height: 203px;
+    margin-bottom: -5px;
+  }
+}
+
+.card:first-of-type .card__img--small {
+  margin-bottom: 3px;
+
+  @include media-tablet {
+    margin-bottom: -7px;
   }
 }
 
 .card__img--small {
+  margin-bottom: -15px;
+
   @include media-tablet {
+    margin-bottom: -5px;
     max-width: unset;
     width: auto;
     height: auto;
