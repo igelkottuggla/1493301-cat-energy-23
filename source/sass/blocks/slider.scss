@@ -85,7 +85,7 @@
   }
 
   @include media-desktop {
-    top: 45%;
+    top: 50%;
     transform: translate(-45%, -50%);
   }
 }
@@ -122,6 +122,11 @@
       transform: translate(-50%, -50%);
     }
   }
+
+  @include media-desktop {
+    top: 3px;
+    left: 51%;
+  }
 }
 
 .slider__toggle:hover {
@@ -129,6 +134,12 @@
 }
 
 .slider__toggle:active {
+  border: 1px solid $button-color;
+  box-shadow: $slider-box-shadow;
+}
+
+.slider__toggle:focus {
+  outline: none;
   border: 1px solid $button-color;
   box-shadow: $slider-box-shadow;
 }

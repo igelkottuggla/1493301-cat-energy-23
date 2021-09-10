@@ -66,6 +66,7 @@
 
 .example__main-title {
   @include secondary-titles-fs36-lh40;
+  @include reset-text-slyle;
   margin-bottom: 33px;
 
   @include media-tablet {
@@ -80,6 +81,7 @@
 
 .example__description {
   @include plain-text-fs14;
+  @include reset-text-slyle;
   color: $grey-text;
 
   @include media-tablet {

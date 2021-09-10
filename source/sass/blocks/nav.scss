@@ -10,6 +10,7 @@
 }
 
 .nav__list {
+  @include reset-list-slyle;
   width: 100vw;
   background-color: $primary-bg-color;
 

@@ -15,6 +15,7 @@
 
 .advantages__main-title {
   @include secondary-titles-fs36-lh40;
+  @include reset-text-slyle;
   margin-bottom: 40px;
 
   @include media-tablet {
@@ -29,6 +30,8 @@
 }
 
 .advantages__list {
+  @include reset-list-slyle;
+
   @include media-tablet {
     display: grid;
     grid-template-columns: repeat(2, 260px);
@@ -115,6 +118,7 @@
 }
 
 .advantages__list-description {
+  @include reset-text-slyle;
   padding-left: 80px;
   color: $grey-text;
   padding-bottom: 7px;

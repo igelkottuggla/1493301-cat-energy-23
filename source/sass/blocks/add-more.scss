@@ -21,16 +21,16 @@
   width: 100%;
 
   @include media-desktop {
-    @include media-desktop {
-      display: grid;
-      grid-template-columns: 1fr 245px;
-      grid-column-gap: 79px;
-    }
+    display: grid;
+    grid-template-columns: 1fr 245px;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 79px;
   }
 }
 
 .add-more__heading {
   @include secondary-subtitles-fs24-lh24;
+  @include reset-text-slyle;
   position: relative;
   margin: 0 0 36px;
 
@@ -90,6 +90,7 @@
 }
 
 .add-more__list {
+  @include reset-list-slyle;
   width: 100%;
 }
 
@@ -119,6 +120,7 @@
 
 .add-more__title {
   @include small-titles-fs16;
+  @include reset-text-slyle;
   color: $dark-grey-text;
   text-transform: uppercase;
   margin-bottom: 13px;
@@ -148,6 +150,7 @@
 
 .add-more__amount {
   @include plain-text-fs14;
+  @include reset-text-slyle;
   line-height: $add-more-amount-lh;
   color: $grey-text;
   display: flex;
