@@ -47,7 +47,7 @@
     background: linear-gradient(to top, $white 0, $promo-bg-partial-opacity 0),
       url("../img/promo/desktop/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     top: 0;
     right: 0;
     z-index: -1;
