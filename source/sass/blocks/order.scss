@@ -135,6 +135,7 @@
 
 .order__input:focus + .order__label--radio::before {
   border: 1px solid $label-hover-color;
+  box-shadow: 0 2px 7px $partial-opacity-green;
 }
 
 .order__input:disabled + .order__label {
@@ -195,6 +196,7 @@
 
 .order__input--checkbox:focus + .order__label::before {
   border: 1px solid $label-hover-color;
+  box-shadow: 0 2px 3px $partial-opacity-green;
 }
 
 .order__input[type="number"] {
