@@ -67,7 +67,7 @@
   }
 }
 
-.slider__bar {
+.slider__input {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -90,8 +90,33 @@
   }
 }
 
-.slider__toggle {
-  position: absolute;
+.slider__range [type="range"] {
+  -webkit-appearance: none;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 84px;
+  height: 14px;
+  background: $primary-bg-color;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+
+  @include media-tablet {
+    width: 428px;
+    height: 6px;
+    background-color: $slider-bar-bg;
+  }
+
+  @include media-desktop {
+    top: 50%;
+    transform: translate(-45%, -50%);
+  }
+}
+
+/* custom thumb */
+.slider__range [type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
   width: 35px;
   height: 6px;
   top: 3px;
@@ -105,41 +130,61 @@
     width: 34px;
     height: 34px;
     border-radius: 50%;
+    border: $primary-bg-color 12px solid;
     top: 4px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $primary-bg-color;
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 8px;
-      height: 8px;
-      background-color: $green-bg-color;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  @include media-desktop {
-    top: 3px;
-    left: 51%;
+    background-color: $basic-green;
   }
 }
 
-.slider__toggle:hover {
+.slider__range [type="range"]::-webkit-slider-thumb:hover {
   box-shadow: $slider-box-shadow;
 }
 
-.slider__toggle:active {
+.slider__range [type="range"]::-moz-range-thumb:active {
   border: 1px solid $button-color;
   box-shadow: $slider-box-shadow;
 }
 
-.slider__toggle:focus {
+.slider__range [type="range"]::-moz-range-thumb:focus {
   outline: none;
   border: 1px solid $button-color;
   box-shadow: $slider-box-shadow;
 }
+
+
+// .slider__toggle {
+//   position: absolute;
+//   width: 35px;
+//   height: 6px;
+//   top: 3px;
+//   left: 6px;
+//   background: $basic-green;
+//   border-radius: 6px;
+//   border: none;
+//   cursor: pointer;
+
+//   @include media-tablet {
+//     width: 34px;
+//     height: 34px;
+//     border-radius: 50%;
+//     top: 4px;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     background-color: $primary-bg-color;
+//   }
+// }
+
+// @include media-tablet {
+//   .slider__toggle::before {
+//       position: absolute;
+//       content: "";
+//       width: 8px;
+//       height: 8px;
+//       background-color: $green-bg-color;
+//       border-radius: 50%;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//     }
+// }

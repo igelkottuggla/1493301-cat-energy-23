@@ -25,6 +25,7 @@
       $primary-grey-bg 137px
     );
     width: 363px;
+    max-width: 715px;
   }
 
   @include media-desktop {
@@ -35,6 +36,7 @@
       $primary-grey-bg 184px
     );
     width: 375px;
+    max-width: 687px;
   }
 }
 

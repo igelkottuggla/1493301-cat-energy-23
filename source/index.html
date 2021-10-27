@@ -379,16 +379,19 @@
                   >
                     Было
                   </button>
-                  <label class="slider__label">
-                    <input
-                      type="range"
-                      class="slider__input visually-hidden"
-                      min="0"
-                      max="100"
-                      step="1"
-                      value="50"
-                    />
-                  </label>
+                  <div class="slider__range">
+                    <label class="slider__label">
+                      <input
+                        type="range"
+                        class="slider__input"
+                        min="0"
+                        max="100"
+                        step="1"
+                        value="50"
+                      />
+                    </label>
+                  </div>
+
                   <button
                     type="button"
                     class="slider__button slider__button--after"
@@ -397,13 +400,13 @@
                   </button>
                 </div>
 
-                <div class="slider__bar">
+                <!-- <div class="slider__bar">
                   <button
                     class="slider__toggle"
                     aria-label="Ползунок для слайдера"
                     tabindex="0"
                   ></button>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

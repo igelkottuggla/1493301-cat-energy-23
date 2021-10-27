@@ -176,7 +176,7 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
-// Build
+// build
 
 const build = gulp.series(
   clean,

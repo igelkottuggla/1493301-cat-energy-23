@@ -15,12 +15,12 @@
   @include media-desktop {
     margin-top: 25px;
     min-height: 595px;
-    background: linear-gradient(
+    background-image: linear-gradient(
         to bottom,
         $primary-bg-color 135px,
         transparent 130px
       ),
-      linear-gradient(to right, $primary-grey-bg 73%, $secondary-grey-bg 40%);
+      linear-gradient(to right, $primary-grey-bg 100%, $secondary-grey-bg 40%);
   }
 }
 
